@@ -1,0 +1,16 @@
+#include "cmdline_options.h"
+#include <gtest/gtest.h>
+
+TEST(CmdLineOptionsTest, TestParseOptions) {
+    const char* argv[] = {"program", "--bench", "bench.yaml", "--cwd", "/tmp", "--timeout", "10", "--error", "0.01", "--debug"};
+    int argc = sizeof(argv) / sizeof(argv[0]);
+
+    CmdLineOptions options;
+    options.parse(argc, argv);
+
+    EXPECT_EQ(options.m_bench, "bench.yaml");
+    EXPECT_EQ(options.m_cwd, "/tmp");
+    EXPECT_EQ(options.m_timeout_threshold, 10);
+    EXPECT_EQ(options.m_err_rate_threshold, 0.01);
+    EXPECT_EQ(options.m_debug, true);
+}
