@@ -3,16 +3,25 @@
 ---
 ## 赛题描述
 阶段一：完成仿真环境搭建与基准测试运行 
+
 阶段二：修复现有Benchmark 并设计新测试用例 
+
 阶段三：集成自定义CPU模拟器并开展对比实验
+
 阶段四：分析互连架构性能并提出优化方案
 
 ### 阶段一：按照说明安装并运行仿真器成功 
+
 #### 1.1 赛题要求 
+
 1. 按照说明文档安装仿真器（但是里面没有环境安装具体的指令，特别是GPGPU-sim 需要的 CUDA 安装，需要自行百度）
+
 #### 1.2 赛题目标 
+
 1. 运行自带的benchmark 成功，运行界面无报错，每个阶段每个芯粒的log 文件有对应内容
+
 对于上述的要求和目标
+
 先安装好各自的依赖包 `gem5` , `gpgpu-sim` ,  `snipersim` （snipersim可以在后面安装的时候根据提示来安装）
 
 1.从github上下载仓库。
@@ -312,89 +321,6 @@ make clean
 
 要求一里面的构建有bug是指的当CPU跟GPU进行数据传输，在最后CPU把输出都传完了，GPU按理来说应该是结束了，但因为里面的while(1)，导致一直没结束，一直在循环空转中，等待CPU传下一个根本不存在的指令。对于这部分的修改bug，需要在GPU和CPU的通信过程中，加入终止信号，让GPU能够退出循环，从而进程终止。
 
-加入终止信号流程
-
-mlp.cu（第一种添加方式）
-
-![image-20251017103738537](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251017103738537.png)
-
-mlp.cpp（第一种添加方式）
-
-![image-20251017103818937](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251017103818937.png)
-
-第一种方法的结果图
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251125225521273.png" alt="image-20251125225521273" style="zoom: 67%;" />
-
-
-
-
-
-
-
-mlp.cu（第二种添加方式）
-
-![image-20251120160829244](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251120160829244.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-mlp.cpp（第二种添加方式）
-
-![image-20251120160714328](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251120160714328.png)
-
-![image-20251120160732854](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251120160732854.png)
-
-
-
-还有在mlp.yml中修改这个参数，将2改成5，因为芯粒规矩可达到(1，4),mesh网格大小至少是5才不会让popnet的报错
-
-![image-20251120160020132](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251120160020132.png)
-
-
-
-加入完之后，可以先make编译，然后运行下面的代码
-
-```
-../../interchiplet/bin/interchiplet ./mlp.yml
-```
-
-结果图
-
-![image-20251120155931546](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251120155931546.png)
-
-
-
----
-
-这部分是做修改的指标（可以看另一个部分的，这部分可以不用看）
-
-对于要求二，可以以阶段一的benchmark/matmul里面的文件来做修改，更改里面的矩阵大小，更改里面的精度，更改传输的容量大小来构建新的benchmark
-
-1.去修改里面的clock_rate,所影响的运行时间和周期
-
-![image-20251017104914772](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251017104914772.png)
-
-2.去修改矩阵的大小，所影响的运行时间和周期
-
-![image-20251017104956104](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251017104956104.png)
-
----
-
-
-
-
-
-
 
 对于要求二，构建了新的边界基准：CPU 驱动程序现在发送每个芯片的元数据（长度 + 限制），流式传输可变大小的 int32 数据负载，并验证 GPU 结果。每个目标使用不同的消息大小来探测 NoC 上的边界条件。
 实现了 GPU 工作程序，它接收元数据/负载，限制值，执行块级归约，记录工作，并返回总和。
@@ -421,7 +347,6 @@ clamp_and_sum 核心使用 clamp 限制值、长度 h_len。
 PopNet/拓扑 (benchmark/boundary/boundary.yml, Phase2)
 
 
-
 网格与通道：-A 2 (ary size) / -c 2 (cube dimension)，-V 3 虚通道。
 缓冲：-B 12 输入缓冲，-O 12 输出缓冲，-F 4 flit 大小。
 链路/时间：-L 1000 链路长度，-T 10000000 仿真周期（可放大以覆盖更长时间戳）。
@@ -429,213 +354,8 @@ PopNet/拓扑 (benchmark/boundary/boundary.yml, Phase2)
 Trace：-I ../bench.txt，延迟文件 -D ../delayInfo.txt。
 芯粒布置 (boundary.yml, Phase1)
 
-
-
 GPU 芯粒坐标与数量：GPU 在 (0,1)、(1,0)、(1,1)，CPU 在 (0,0)。
 可以调整以上参数（例如增大/减小 len、clamp，改变随机分布范围，改线程数、缓冲大小、虚通道数、链路长度、仿真周期等）来探索边界条件。
-
-
-
-
-
-
-
-boundary.cpp
-
-```
-#include <cstdlib>
-#include <cstdint>
-#include <iostream>
-#include <random>
-#include <vector>
-
-#include "apis_c.h"
-
-// Simple clamp to keep values within |bound|.
-int64_t clamp_value(int64_t v, int64_t bound) {
-    if (v > bound) return bound;
-    if (v < -bound) return -bound;
-    return v;
-}
-
-int main(int argc, char** argv) {
-    if (argc < 3) {
-        std::cerr << "Usage: boundary_cpu <srcX> <srcY>\n";
-        return 1;
-    }
-
-    const int srcX = std::atoi(argv[1]);
-    const int srcY = std::atoi(argv[2]);
-
-    // Targets exercise the coordinate boundary of a 2x2 mesh and vary payload size.
-    struct Target {
-        int dstX;
-        int dstY;
-        int64_t len;
-        int64_t clamp;
-    };
-
-    std::vector<Target> targets = {
-        {0, 1, 128, 256},
-        {1, 0, 512, 512},
-        {1, 1, 1024, 1024},
-    };
-
-    std::mt19937_64 rng(42);
-    std::uniform_int_distribution<int32_t> dist(-1500, 1500);
-
-    for (const auto& t : targets) {
-        std::vector<int32_t> payload(static_cast<size_t>(t.len));
-        for (auto& v : payload) {
-            v = dist(rng);
-        }
-
-        // Compute expected clamp-and-sum on CPU for verification.
-        int64_t expected = 0;
-        for (auto v : payload) {
-            expected += clamp_value(v, t.clamp);
-        }
-
-        int64_t header[2] = {t.len, t.clamp};
-        // First send metadata so the GPU knows how many elements to expect and what clamp to use.
-        InterChiplet::sendMessage(t.dstX, t.dstY, srcX, srcY, (void*)header, sizeof(header));
-        // Then send the data buffer.
-        InterChiplet::sendMessage(t.dstX, t.dstY, srcX, srcY, payload.data(),
-                                  t.len * sizeof(int32_t));
-
-        int64_t result = 0;
-        InterChiplet::receiveMessage(srcX, srcY, t.dstX, t.dstY, (void*)&result,
-                                     sizeof(int64_t));
-
-        std::cout << "[CPU] From chiplet (" << t.dstX << "," << t.dstY << ") length=" << t.len
-                  << " clamp=" << t.clamp << " -> sum=" << result
-                  << " (expected " << expected << ")\n";
-    }
-
-    return 0;
-}
-
-```
-
-
-
-boundary.cu
-
-```
-#include <cstdlib>
-#include <cstdint>
-#include <cstdio>
-#include <iostream>
-#include <vector>
-
-#include "apis_cu.h"
-#include "cuda_runtime.h"
-#include "device_launch_parameters.h"
-
-// Each block clamps a slice of the payload and reduces to one partial sum.
-__global__ void clamp_and_sum(const int32_t* in, int64_t* block_sums, int n, int64_t clamp) {
-    extern __shared__ int64_t sdata[];
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    int tid = threadIdx.x;
-
-    int64_t v = 0;
-    if (idx < n) {
-        v = static_cast<int64_t>(in[idx]);
-        if (v > clamp) {
-            v = clamp;
-        } else if (v < -clamp) {
-            v = -clamp;
-        }
-    }
-    sdata[tid] = v;
-    __syncthreads();
-
-    for (int offset = blockDim.x / 2; offset > 0; offset >>= 1) {
-        if (tid < offset) {
-            sdata[tid] += sdata[tid + offset];
-        }
-        __syncthreads();
-    }
-
-    if (tid == 0) {
-        block_sums[blockIdx.x] = sdata[0];
-    }
-}
-
-int main(int argc, char** argv) {
-    if (argc < 3) {
-        printf("Usage: boundary_cu <idX> <idY>\n");
-        return 1;
-    }
-
-    int idX = std::atoi(argv[1]);
-    int idY = std::atoi(argv[2]);
-
-    int64_t* d_header = nullptr;
-    cudaMalloc((void**)&d_header, sizeof(int64_t) * 2);
-
-    // Receive {len, clamp} describing the next payload.
-    receiveMessage(idX, idY, 0, 0, d_header, sizeof(int64_t) * 2);
-    int64_t h_header[2] = {0, 0};
-    cudaMemcpy(h_header, d_header, sizeof(int64_t) * 2, cudaMemcpyDeviceToHost);
-    int64_t h_len = h_header[0];
-    int64_t clamp = h_header[1];
-
-    if (h_len <= 0) {
-        cudaFree(d_header);
-        return 0;
-    }
-
-    printf("[GPU %d,%d] len=%ld clamp=%ld\n", idX, idY, static_cast<long>(h_len),
-           static_cast<long>(clamp));
-
-    int32_t* d_data = nullptr;
-    cudaMalloc((void**)&d_data, sizeof(int32_t) * h_len);
-
-    // Receive payload
-    receiveMessage(idX, idY, 0, 0, d_data, sizeof(int32_t) * h_len);
-
-    int threads = 256;
-    int blocks = static_cast<int>((h_len + threads - 1) / threads);
-    int shared_bytes = threads * sizeof(int64_t);
-
-    int64_t* d_block_sums = nullptr;
-    cudaMalloc((void**)&d_block_sums, sizeof(int64_t) * blocks);
-
-    clamp_and_sum<<<blocks, threads, shared_bytes>>>(d_data, d_block_sums,
-                                                     static_cast<int>(h_len), clamp);
-    cudaDeviceSynchronize();
-
-    std::vector<int64_t> h_block_sums(static_cast<size_t>(blocks), 0);
-    cudaMemcpy(h_block_sums.data(), d_block_sums, sizeof(int64_t) * blocks,
-               cudaMemcpyDeviceToHost);
-
-    int64_t total = 0;
-    for (auto v : h_block_sums) {
-        total += v;
-    }
-
-    printf("[GPU %d,%d] sum=%ld\n", idX, idY, static_cast<long>(total));
-
-    int64_t* d_result = nullptr;
-    cudaMalloc((void**)&d_result, sizeof(int64_t));
-    cudaMemcpy(d_result, &total, sizeof(int64_t), cudaMemcpyHostToDevice);
-
-    sendMessage(0, 0, idX, idY, d_result, sizeof(int64_t));
-
-    cudaFree(d_header);
-    cudaFree(d_data);
-    cudaFree(d_block_sums);
-    cudaFree(d_result);
-    return 0;
-}
-
-```
-
-
-
-![image-20251121155143246](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251121155143246.png)
-
 
 
 
@@ -716,75 +436,6 @@ int main(int argc, char** argv) {
 
 1. 成功设计或引入新的CPU仿真器，实现任意benchmark的运行； 
 2. 成功运行mlp，比较其与现有仿真器的性能差异。
-
-
-
-[【亲测免费】 RISC-V ISA Simulator (Spike) 使用教程-CSDN博客](https://blog.csdn.net/gitblog_00219/article/details/142810182)
-
-
-
-CPU模拟器参考实现
-
-```
-#include <stdint.h>
-#include <stdio.h>
-#define NREG 4
-#define NMEM 16
-
-// 定义指令格式
-typedef union {
-    struct { uint8_t rs : 2, rt : 2, op : 4; } rtype;
-    struct { uint8_t addr : 4      , op : 4; } mtype;
-    uint8_t inst;
-}inst_t;
- 
-#define DECODE_R(inst) uint8_t rt = (inst).rtype.rt, rs = (inst).rtype.rs
-
-#define DECODE_M(inst) uint8_t addr = (inst).mtype.addr
-
-uint8_t pc = 0; // PC, C语言中没有4位的数据类型,我们采用8位类型来表示
-
-uint8_t R[NREG] = {}; //寄存器
-
-uint8_t M[NMEM] = { //内存,其中包含一个计算z = x + y的程序
-    0b11100110, // load 6# | R[0] <-M[y]
-    0b00000100, // mov r1, r0 | R[1] <-R[0]
-    0b11100101, // load 5# | R[0] <-M[x]
-    0b00010001, // add r0, r1 | R[0] <-R[0] + R[1]
-    0b11110111, // store 7# | M[z] <-R[0]
-    0b00010000, // x = 16
-    0b00100001, // y = 33
-    0b00000000, // z = 0
-};
-
-int halt = 0; //结束标志
-
-// 执行一条指令
-void exec_once() {
- inst_t this;
- this.inst = M[pc]; // 取指
- switch (this.rtype.op) {
-    case 0b0000: { DECODE_R(this); R[rt]   = R[rs];   break; }
-    case 0b0001: { DECODE_R(this); R[rt]  += R[rs];   break; }
-    case 0b1110: { DECODE_M(this); R[0]    = M[addr]; break; }
-    case 0b1111: { DECODE_M(this); M[addr] = R[0];    break; }
-	default:
-	  printf("Invalid instruction with opcode = %x, halting...\n", this.rtype.op);
-      halt = 1;
-	  break;
-  }
-   pc++; // 更新PC
-}
-int main() {
- 	while (1) {
-      exec_once();
-      if (halt) break;
-     }
-  	 printf("The result of 16 + 33 is %d\n", M[7]);
-   	 return 0;
-}
-```
-
 
 
 
