@@ -103,15 +103,11 @@ make -j4
 
 之后去测试snipersim能否运行，然后cd到 test/fft 运行make run 发现是能够成功运行显示详细模拟结果与性能统计数据
 
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251119113620816.png" alt="image-20251119113620816" style="zoom:50%;" />
-
 
 
 6.编译安装Gem5。请查看Gem5文档获取详细安装指南。LegoSim中可以运行X86和ARM架构仿真器
 
 这里可以通过指令`uname -m`查看自己的虚拟机是什么类型的架构 ，然后对应的去编译gem5比较好一点
-
-![image-20250922113041386](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20250922113041386.png)
 
 ```
 cd gem5
@@ -124,17 +120,7 @@ scons build/X86/gem5.opt
 cd gem5
 scons build/ARM/gem5.opt
 ```
-
-编译成功图
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251119113323016.png" alt="image-20251119113323016" style="zoom:67%;" />
-
-
-
 Gem5编译完能成功生成opt文件
-
-![image-20251119113136279](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251119113136279.png)
-
 
 
 7.编译安装GPGPUSim。GPGPUsim安装有前置条件：
@@ -181,15 +167,6 @@ cd gpgpu-sim
 make -j4
 ```
 
-make完的情况
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251119123231289.png" alt="image-20251119123231289" style="zoom:50%;" />
-
-ldd来链接看到是否有链接到我们的cuda动态库
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251119123301042.png" alt="image-20251119123301042" style="zoom:50%;" />
-
-
 
 > [!NOTE]
 >
@@ -199,9 +176,7 @@ ldd来链接看到是否有链接到我们的cuda动态库
 > source setup_environment
 > ```
 >
-> ![image-20251119123337621](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251119123337621.png)
->
-> source setup_environment 成功图
+
 
 
 
@@ -238,7 +213,6 @@ ldd来链接看到是否有链接到我们的cuda动态库
 > pkg-config --modversion libzmq
 > ```
 >
-> ![image-20250922140722089](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20250922140722089.png)
 
 
 
@@ -252,13 +226,8 @@ cmake ..
 make -j4
 ```
 
-![image-20251119123539555](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251119123539555.png)
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251119123551230.png" alt="image-20251119123551230" style="zoom:50%;" />
-
 cmake的时候有依赖需要安装
 
-![image-20251119124257695](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251119124257695.png)
 
 
 
@@ -294,7 +263,6 @@ make
 source setup_env.sh
 ```
 
-![image-20250922185535430](C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20250922185535430.png)
 
 2.编译可执行文件
 
@@ -302,8 +270,6 @@ source setup_env.sh
 cd benchmark/matmul
 make
 ```
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251120100744687.png" alt="image-20251120100744687" style="zoom: 67%;" />
 
 
 
@@ -319,21 +285,12 @@ make
 2. Sniper仿真的临时文件和sniper仿真的日志文件sniper.log。
 3. Popnet的日志文件popnet.log。
 
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251120100808913.png" alt="image-20251120100808913" style="zoom:67%;" />
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251120100819181.png" alt="image-20251120100819181" style="zoom:67%;" />
-
-
 
 4.清理可执行文件和输出文件。
 
 ```
 make clean
 ```
-
-
-
-
 
 ---
 
@@ -343,13 +300,13 @@ make clean
 
 #### 2.1 赛题要求 
 
-  1. 本项目benchmark 中的 mlp 构建有 bug，会陷入死循环，请找到并修改这个bug；
- 1. 请构建新的benchmark，引入新的条件变量，探索本仿真器的使用边界。 
+1. 本项目benchmark 中的 mlp 构建有 bug，会陷入死循环，请找到并修改这个bug；
+2. 请构建新的benchmark，引入新的条件变量，探索本仿真器的使用边界。 
 
 #### 2.2 赛题目标 
 
 1. 运行 mlp 成功，运行界面无报错，每个阶段每个芯粒的log文件有对应内容；
-1. 构建新的 benchmark，能够成功运行，且运行界面无报错，每个阶段每个芯粒的 log 文件有对应内容。
+2. 构建新的 benchmark，能够成功运行，且运行界面无报错，每个阶段每个芯粒的 log 文件有对应内容。
 
 
 
