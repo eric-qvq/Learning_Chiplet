@@ -17,7 +17,7 @@ GPGPUSIM_TARGET=bin/mlp_cu
 REPO_DIR=$(BENCHMARK_ROOT)/json
 GIT_REPO=https://github.com/nlohmann/json.git
 
-all: sniper_target gpgpusim_target
+all: bin_dir sniper_target gpgpusim_target
 
 sniper_target: $(SNIPER_OBJS)
 	$(CC) -g $(SNIPER_OBJS) $(INTERCHIPLETLIB) -o $(SNIPER_TARGET) -lpthread
@@ -60,16 +60,21 @@ gdb: $(SNIPER_TARGET)
 valgrind: $(SNIPER_TARGET)
 	cd $(BENCHMARK_ROOT) && valgrind --leak-check=full ./$(SNIPER_TARGET) -- $(BENCHMARK_ROOT)/$(SNIPER_TARGET) 0 0
 
+bin_dir:
+	mkdir -p bin
+
 clean:
 	rm -rf bench* buffer* message_record.txt
 	rm -rf _app_cuda_version_* _cuobjdump_list_ptx_* gpgpusim_power_report_* *.ptx *.ptxas gpgpusim.*.log gpgpu_inst_stats.txt gpuRead* cpuRead*  
 	rm -rf sim.cfg sim.info sim.out sim.stats.sqlite3
 	rm -rf checkpoint_files
+	rm -rf bin
 
 cleanall:
 	make clean 
 	rm -rf $(SNIPER_OBJS) $(GPGPUSIM_TARGET) $(SNIPER_TARGET)
 	rm -f start* sniper*
+	rm -rf bin
 
 kill:
 	pkill -f mlp_cu

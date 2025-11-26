@@ -1586,7 +1586,8 @@ interChipletSend(SyscallDesc *desc, ThreadContext *tc,
 {
     std::string fileName = InterChiplet::sendSync(src_x, src_y, dst_x, dst_y);
     BufferArg data(addr, nbytes);
-    data.copyOut(SETranslatingPortProxy(tc));
+    // Fetch payload from simulated process into host buffer before writing to pipe.
+    data.copyIn(SETranslatingPortProxy(tc));
     global_pipe_comm.write_data(fileName.c_str(), data.bufferPtr(), nbytes);
 
     gem5::Tick end_time = InterChiplet::writeSync(
@@ -1605,7 +1606,8 @@ interChipletReceive(SyscallDesc *desc, ThreadContext *tc,
     std::string fileName = InterChiplet::receiveSync(src_x, src_y, dst_x, dst_y);
     BufferArg data(addr, nbytes);
     global_pipe_comm.read_data(fileName.c_str(), data.bufferPtr(), nbytes);
-    data.copyIn(SETranslatingPortProxy(tc));
+    // Push payload back into the simulated process memory.
+    data.copyOut(SETranslatingPortProxy(tc));
 
     gem5::Tick end_time = InterChiplet::readSync(
         curTick(), src_x, src_y, dst_x, dst_y, nbytes, 0);

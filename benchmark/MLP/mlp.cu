@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <sys/time.h>
 
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
-#include <string>
+#include <string> 
 
 #include "apis_cu.h"
 #include "cuda_runtime.h"
@@ -28,8 +29,7 @@ __global__ void matrix_mul_gpu(int64_t *M, int64_t *N, int64_t *P, int64_t width
 
 int Row_A = 0, Col_A = 0, Row_B = 0, Col_B = 0;
 int main(int argc, char **argv) {
-    while (1) {
-        char *fileName = new char[100];
+//        char *fileName = new char[100];
         // 读取本进程所代表的chiplet编号
         int srcX = atoi(argv[1]);
         int srcY = atoi(argv[2]);
@@ -38,12 +38,17 @@ int main(int argc, char **argv) {
         int64_t *Size_A, *Size_B;
         cudaMalloc((void **)&Size_A, sizeof(int64_t) * 2);
         cudaMalloc((void **)&Size_B, sizeof(int64_t) * 2);
-
+    while (1) {
         receiveMessage(srcX, srcY, 0, 0, Size_A, sizeof(int64_t) * 2);
         receiveMessage(srcX, srcY, 0, 0, Size_B, sizeof(int64_t) * 2);
 
         cudaMemcpy(size_A, Size_A, sizeof(int64_t) * 2, cudaMemcpyDeviceToHost);
         cudaMemcpy(size_B, Size_B, sizeof(int64_t) * 2, cudaMemcpyDeviceToHost);
+
+        if (size_A[0] == 0 || size_A[1] == 0 || size_B[0] == 0 || size_B[1] == 0) {
+            break;
+        }        
+
         Row_A = size_A[0];
         Col_A = size_A[1];
         Row_B = size_B[0];

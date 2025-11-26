@@ -6793,7 +6793,7 @@ __host__ cudaError_t CUDARTAPI receiveMessage(int __dst_x, int __dst_y, int __sr
 
     // write data to GPU memory.
     cudaMemcpy(__addr, interdata, __nbyte, cudaMemcpyHostToDevice);
-    delete interdata;
+    delete[] interdata;
 
     return cudaSuccess;
 }

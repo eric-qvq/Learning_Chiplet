@@ -1,5 +1,647 @@
+diff --git a/.clang-format b/.clang-format
+old mode 100644
+new mode 100755
+diff --git a/.gdbinit b/.gdbinit
+old mode 100644
+new mode 100755
+diff --git a/.gitignore b/.gitignore
+old mode 100644
+new mode 100755
+diff --git a/.travis.yml b/.travis.yml
+old mode 100644
+new mode 100755
+diff --git a/CHANGES b/CHANGES
+old mode 100644
+new mode 100755
+diff --git a/COPYRIGHT b/COPYRIGHT
+old mode 100644
+new mode 100755
+diff --git a/Jenkinsfile b/Jenkinsfile
+old mode 100644
+new mode 100755
+diff --git a/Makefile b/Makefile
+old mode 100644
+new mode 100755
+index d248211..25f461d
+--- a/Makefile
++++ b/Makefile
+@@ -270,4 +270,3 @@ cleangpgpusim: cleandocs
+ 		./cuobjdump_to_ptxplus/lex.ptx_.c ./cuobjdump_to_ptxplus/ptx.output ./cuobjdump_to_ptxplus/ptx.tab.h cuobjdump_to_ptxplus/ptx.tab.h \
+ 		./cuobjdump_to_ptxplus/sass_lexer.cc ./cuobjdump_to_ptxplus/sass_parser.cc ./cuobjdump_to_ptxplus/sass_parser.hh \
+ 		./cuobjdump_to_ptxplus/ptx.tab.cc ./cuobjdump_to_ptxplus/*.output
+-
+diff --git a/README.md b/README.md
+old mode 100644
+new mode 100755
+diff --git a/aerialvision/README b/aerialvision/README
+old mode 100644
+new mode 100755
+diff --git a/aerialvision/configs.py b/aerialvision/configs.py
+old mode 100644
+new mode 100755
+diff --git a/aerialvision/guiclasses.py b/aerialvision/guiclasses.py
+old mode 100644
+new mode 100755
+diff --git a/aerialvision/lexyacc.py b/aerialvision/lexyacc.py
+old mode 100644
+new mode 100755
+diff --git a/aerialvision/lexyaccbookmark.py b/aerialvision/lexyaccbookmark.py
+old mode 100644
+new mode 100755
+diff --git a/aerialvision/lexyacctexteditor.py b/aerialvision/lexyacctexteditor.py
+old mode 100644
+new mode 100755
+diff --git a/aerialvision/organizedata.py b/aerialvision/organizedata.py
+old mode 100644
+new mode 100755
+diff --git a/aerialvision/startup.py b/aerialvision/startup.py
+old mode 100644
+new mode 100755
+diff --git a/aerialvision/variableclasses.py b/aerialvision/variableclasses.py
+old mode 100644
+new mode 100755
+diff --git a/bitbucket-pipelines.yml b/bitbucket-pipelines.yml
+old mode 100644
+new mode 100755
+diff --git a/checkpoint.md b/checkpoint.md
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/GTX480/config_fermi_islip.icnt b/configs/deprecated-cfgs/GTX480/config_fermi_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/GTX480/gpgpusim.config b/configs/deprecated-cfgs/GTX480/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/GeForceGTX750Ti/config_fermi_islip.icnt b/configs/deprecated-cfgs/GeForceGTX750Ti/config_fermi_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/GeForceGTX750Ti/gpgpusim.config b/configs/deprecated-cfgs/GeForceGTX750Ti/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/QuadroFX5600/gpgpusim.config b/configs/deprecated-cfgs/QuadroFX5600/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/QuadroFX5600/gpuwattch_quadrofx5600.xml b/configs/deprecated-cfgs/QuadroFX5600/gpuwattch_quadrofx5600.xml
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/QuadroFX5600/icnt_config_islip.icnt b/configs/deprecated-cfgs/QuadroFX5600/icnt_config_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/QuadroFX5800/config_quadro_islip.icnt b/configs/deprecated-cfgs/QuadroFX5800/config_quadro_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/QuadroFX5800/gpgpusim.config b/configs/deprecated-cfgs/QuadroFX5800/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/SM6_GTX1080/config_fermi_islip.icnt b/configs/deprecated-cfgs/SM6_GTX1080/config_fermi_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/SM6_GTX1080/gpgpusim.config b/configs/deprecated-cfgs/SM6_GTX1080/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/SM6_GTX1080/gpgpusim.config.orig b/configs/deprecated-cfgs/SM6_GTX1080/gpgpusim.config.orig
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/SM6_P100/config_fermi_islip.icnt b/configs/deprecated-cfgs/SM6_P100/config_fermi_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/SM6_P100/gpgpusim.config b/configs/deprecated-cfgs/SM6_P100/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/SM6_TITANX/config_fermi_islip.icnt b/configs/deprecated-cfgs/SM6_TITANX/config_fermi_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/SM6_TITANX/gpgpusim.config b/configs/deprecated-cfgs/SM6_TITANX/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/SM7_TITANV/config_fermi_islip.icnt b/configs/deprecated-cfgs/SM7_TITANV/config_fermi_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/SM7_TITANV/gpgpusim.config b/configs/deprecated-cfgs/SM7_TITANV/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/TeslaC2050/config_fermi_islip.icnt b/configs/deprecated-cfgs/TeslaC2050/config_fermi_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/deprecated-cfgs/TeslaC2050/gpgpusim.config b/configs/deprecated-cfgs/TeslaC2050/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM2_GTX480/config_fermi_islip.icnt b/configs/tested-cfgs/SM2_GTX480/config_fermi_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM2_GTX480/gpgpusim.config b/configs/tested-cfgs/SM2_GTX480/gpgpusim.config
+old mode 100644
+new mode 100755
+index 609a9ef..c618f00
+--- a/configs/tested-cfgs/SM2_GTX480/gpgpusim.config
++++ b/configs/tested-cfgs/SM2_GTX480/gpgpusim.config
+@@ -1,7 +1,9 @@
+ # functional simulator specification
+ -gpgpu_ptx_instruction_classification 0
+--gpgpu_ptx_sim_mode 0
++-gpgpu_ptx_sim_mode 1          # force functional PTX simulation to avoid deadlocks
+ -gpgpu_ptx_force_max_capability 20 
++-gpgpu_deadlock_detect 0       # disable deadlock detection in perf model (safety)
++-gpgpu_max_cycle 0             # no cycle cap to avoid premature abort
+ 
+ # Device Limits
+ -gpgpu_stack_size_limit 1024
+diff --git a/configs/tested-cfgs/SM3_KEPLER_TITAN/config_kepler_islip.icnt b/configs/tested-cfgs/SM3_KEPLER_TITAN/config_kepler_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM3_KEPLER_TITAN/gpgpusim.config b/configs/tested-cfgs/SM3_KEPLER_TITAN/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM6_TITANX/config_pascal_islip.icnt b/configs/tested-cfgs/SM6_TITANX/config_pascal_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM6_TITANX/gpgpusim.config b/configs/tested-cfgs/SM6_TITANX/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM75_RTX2060/config_turing_islip.icnt b/configs/tested-cfgs/SM75_RTX2060/config_turing_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM75_RTX2060/gpgpusim.config b/configs/tested-cfgs/SM75_RTX2060/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM7_QV100/config_volta_islip.icnt b/configs/tested-cfgs/SM7_QV100/config_volta_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM7_QV100/gpgpusim.config b/configs/tested-cfgs/SM7_QV100/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM7_TITANV/config_volta_islip.icnt b/configs/tested-cfgs/SM7_TITANV/config_volta_islip.icnt
+old mode 100644
+new mode 100755
+diff --git a/configs/tested-cfgs/SM7_TITANV/gpgpusim.config b/configs/tested-cfgs/SM7_TITANV/gpgpusim.config
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/Makefile b/cuobjdump_to_ptxplus/Makefile
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/cuobjdumpInst.cc b/cuobjdump_to_ptxplus/cuobjdumpInst.cc
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/cuobjdumpInst.h b/cuobjdump_to_ptxplus/cuobjdumpInst.h
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/cuobjdumpInstList.cc b/cuobjdump_to_ptxplus/cuobjdumpInstList.cc
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/cuobjdumpInstList.h b/cuobjdump_to_ptxplus/cuobjdumpInstList.h
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/cuobjdump_to_ptxplus.cc b/cuobjdump_to_ptxplus/cuobjdump_to_ptxplus.cc
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/elf.l b/cuobjdump_to_ptxplus/elf.l
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/elf.y b/cuobjdump_to_ptxplus/elf.y
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/header.l b/cuobjdump_to_ptxplus/header.l
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/header.y b/cuobjdump_to_ptxplus/header.y
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/ptx.l b/cuobjdump_to_ptxplus/ptx.l
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/ptx.y b/cuobjdump_to_ptxplus/ptx.y
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/ptx_parser.h b/cuobjdump_to_ptxplus/ptx_parser.h
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/sass.l b/cuobjdump_to_ptxplus/sass.l
+old mode 100644
+new mode 100755
+diff --git a/cuobjdump_to_ptxplus/sass.y b/cuobjdump_to_ptxplus/sass.y
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/Makefile b/debug_tools/WatchYourStep/ptxjitplus/Makefile
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/GL/freeglut.h b/debug_tools/WatchYourStep/ptxjitplus/inc/GL/freeglut.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/GL/freeglut_ext.h b/debug_tools/WatchYourStep/ptxjitplus/inc/GL/freeglut_ext.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/GL/freeglut_std.h b/debug_tools/WatchYourStep/ptxjitplus/inc/GL/freeglut_std.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/GL/glew.h b/debug_tools/WatchYourStep/ptxjitplus/inc/GL/glew.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/GL/glext.h b/debug_tools/WatchYourStep/ptxjitplus/inc/GL/glext.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/GL/glut.h b/debug_tools/WatchYourStep/ptxjitplus/inc/GL/glut.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/GL/glxew.h b/debug_tools/WatchYourStep/ptxjitplus/inc/GL/glxew.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/GL/glxext.h b/debug_tools/WatchYourStep/ptxjitplus/inc/GL/glxext.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/GL/wglew.h b/debug_tools/WatchYourStep/ptxjitplus/inc/GL/wglew.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_histogram.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_histogram.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_radix_sort_downsweep.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_radix_sort_downsweep.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_radix_sort_upsweep.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_radix_sort_upsweep.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_reduce.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_reduce.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_reduce_by_key.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_reduce_by_key.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_rle.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_rle.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_scan.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_scan.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_segment_fixup.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_segment_fixup.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_select_if.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_select_if.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_spmv_orig.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/agent_spmv_orig.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/single_pass_scan_operators.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/agent/single_pass_scan_operators.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_adjacent_difference.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_adjacent_difference.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_discontinuity.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_discontinuity.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_exchange.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_exchange.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_histogram.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_histogram.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_load.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_load.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_radix_rank.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_radix_rank.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_radix_sort.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_radix_sort.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_raking_layout.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_raking_layout.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_reduce.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_reduce.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_scan.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_scan.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_shuffle.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_shuffle.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_store.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/block_store.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_histogram_atomic.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_histogram_atomic.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_histogram_sort.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_histogram_sort.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_reduce_raking.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_reduce_raking.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_reduce_raking_commutative_only.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_reduce_raking_commutative_only.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_reduce_warp_reductions.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_reduce_warp_reductions.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_scan_raking.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_scan_raking.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_scan_warp_scans.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_scan_warp_scans.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_scan_warp_scans2.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_scan_warp_scans2.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_scan_warp_scans3.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/block/specializations/block_scan_warp_scans3.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/cub.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/cub.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_histogram.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_histogram.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_partition.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_partition.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_radix_sort.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_radix_sort.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_reduce.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_reduce.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_run_length_encode.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_run_length_encode.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_scan.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_scan.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_segmented_radix_sort.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_segmented_radix_sort.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_segmented_reduce.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_segmented_reduce.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_select.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_select.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_spmv.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/device_spmv.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_histogram.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_histogram.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_radix_sort.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_radix_sort.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_reduce.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_reduce.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_reduce_by_key.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_reduce_by_key.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_rle.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_rle.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_scan.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_scan.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_select_if.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_select_if.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_spmv_orig.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/device/dispatch/dispatch_spmv_orig.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/grid/grid_barrier.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/grid/grid_barrier.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/grid/grid_even_share.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/grid/grid_even_share.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/grid/grid_mapping.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/grid/grid_mapping.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/grid/grid_queue.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/grid/grid_queue.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/host/mutex.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/host/mutex.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/arg_index_input_iterator.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/arg_index_input_iterator.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/cache_modified_input_iterator.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/cache_modified_input_iterator.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/cache_modified_output_iterator.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/cache_modified_output_iterator.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/constant_input_iterator.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/constant_input_iterator.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/counting_input_iterator.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/counting_input_iterator.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/discard_output_iterator.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/discard_output_iterator.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/tex_obj_input_iterator.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/tex_obj_input_iterator.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/tex_ref_input_iterator.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/tex_ref_input_iterator.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/transform_input_iterator.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/iterator/transform_input_iterator.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_load.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_load.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_operators.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_operators.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_reduce.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_reduce.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_scan.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_scan.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_search.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_search.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_store.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/thread/thread_store.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_allocator.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_allocator.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_arch.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_arch.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_debug.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_debug.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_device.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_device.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_macro.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_macro.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_namespace.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_namespace.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_ptx.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_ptx.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_type.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/util_type.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/specializations/warp_reduce_shfl.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/specializations/warp_reduce_shfl.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/specializations/warp_reduce_smem.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/specializations/warp_reduce_smem.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/specializations/warp_scan_shfl.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/specializations/warp_scan_shfl.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/specializations/warp_scan_smem.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/specializations/warp_scan_smem.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/warp_reduce.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/warp_reduce.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/warp_scan.cuh b/debug_tools/WatchYourStep/ptxjitplus/inc/cub/warp/warp_scan.cuh
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/cuda_drvapi_dynlink.c b/debug_tools/WatchYourStep/ptxjitplus/inc/cuda_drvapi_dynlink.c
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/drvapi_error_string.h b/debug_tools/WatchYourStep/ptxjitplus/inc/drvapi_error_string.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink/cuda_drvapi_dynlink.h b/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink/cuda_drvapi_dynlink.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink/cuda_drvapi_dynlink_cuda.h b/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink/cuda_drvapi_dynlink_cuda.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink/cuda_drvapi_dynlink_d3d.h b/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink/cuda_drvapi_dynlink_d3d.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink/cuda_drvapi_dynlink_gl.h b/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink/cuda_drvapi_dynlink_gl.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink_d3d10.h b/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink_d3d10.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink_d3d11.h b/debug_tools/WatchYourStep/ptxjitplus/inc/dynlink_d3d11.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/exception.h b/debug_tools/WatchYourStep/ptxjitplus/inc/exception.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/helper_cuda.h b/debug_tools/WatchYourStep/ptxjitplus/inc/helper_cuda.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/helper_cuda_drvapi.h b/debug_tools/WatchYourStep/ptxjitplus/inc/helper_cuda_drvapi.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/helper_cuda_gl.h b/debug_tools/WatchYourStep/ptxjitplus/inc/helper_cuda_gl.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/helper_cusolver.h b/debug_tools/WatchYourStep/ptxjitplus/inc/helper_cusolver.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/helper_functions.h b/debug_tools/WatchYourStep/ptxjitplus/inc/helper_functions.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/helper_gl.h b/debug_tools/WatchYourStep/ptxjitplus/inc/helper_gl.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/helper_image.h b/debug_tools/WatchYourStep/ptxjitplus/inc/helper_image.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/helper_math.h b/debug_tools/WatchYourStep/ptxjitplus/inc/helper_math.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/helper_string.h b/debug_tools/WatchYourStep/ptxjitplus/inc/helper_string.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/helper_timer.h b/debug_tools/WatchYourStep/ptxjitplus/inc/helper_timer.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/multithreading.h b/debug_tools/WatchYourStep/ptxjitplus/inc/multithreading.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/nvMath.h b/debug_tools/WatchYourStep/ptxjitplus/inc/nvMath.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/nvMatrix.h b/debug_tools/WatchYourStep/ptxjitplus/inc/nvMatrix.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/nvQuaternion.h b/debug_tools/WatchYourStep/ptxjitplus/inc/nvQuaternion.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/nvShaderUtils.h b/debug_tools/WatchYourStep/ptxjitplus/inc/nvShaderUtils.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/nvVector.h b/debug_tools/WatchYourStep/ptxjitplus/inc/nvVector.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/nvrtc_helper.h b/debug_tools/WatchYourStep/ptxjitplus/inc/nvrtc_helper.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/param.h b/debug_tools/WatchYourStep/ptxjitplus/inc/param.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/paramgl.h b/debug_tools/WatchYourStep/ptxjitplus/inc/paramgl.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/rendercheck_d3d10.h b/debug_tools/WatchYourStep/ptxjitplus/inc/rendercheck_d3d10.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/rendercheck_d3d11.h b/debug_tools/WatchYourStep/ptxjitplus/inc/rendercheck_d3d11.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/rendercheck_d3d9.h b/debug_tools/WatchYourStep/ptxjitplus/inc/rendercheck_d3d9.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/rendercheck_gl.h b/debug_tools/WatchYourStep/ptxjitplus/inc/rendercheck_gl.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/rendercheck_gles.h b/debug_tools/WatchYourStep/ptxjitplus/inc/rendercheck_gles.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/inc/timer.h b/debug_tools/WatchYourStep/ptxjitplus/inc/timer.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/launchkernels b/debug_tools/WatchYourStep/ptxjitplus/launchkernels
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/ptxjitplus.cpp b/debug_tools/WatchYourStep/ptxjitplus/ptxjitplus.cpp
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/ptxjitplus.h b/debug_tools/WatchYourStep/ptxjitplus/ptxjitplus.h
+old mode 100644
+new mode 100755
+diff --git a/debug_tools/WatchYourStep/ptxjitplus/readme.txt b/debug_tools/WatchYourStep/ptxjitplus/readme.txt
+old mode 100644
+new mode 100755
+diff --git a/doc/checkpoint.png b/doc/checkpoint.png
+old mode 100644
+new mode 100755
+diff --git a/doc/doxygen/Makefile b/doc/doxygen/Makefile
+old mode 100644
+new mode 100755
+diff --git a/doc/doxygen/doxygen.css b/doc/doxygen/doxygen.css
+old mode 100644
+new mode 100755
+diff --git a/doc/doxygen/gpgpu-sim.doxygen b/doc/doxygen/gpgpu-sim.doxygen
+old mode 100644
+new mode 100755
+diff --git a/groovy-html.nightly.success.template b/groovy-html.nightly.success.template
+old mode 100644
+new mode 100755
+diff --git a/groovy-html.success.template b/groovy-html.success.template
+old mode 100644
+new mode 100755
 diff --git a/libcuda/Makefile b/libcuda/Makefile
-index c8ff2e3..81e2f9a 100644
+old mode 100644
+new mode 100755
+index c8ff2e3..81e2f9a
 --- a/libcuda/Makefile
 +++ b/libcuda/Makefile
 @@ -108,7 +108,7 @@ lib$(PROG).a: $(OBJS)
@@ -11,8 +653,16 @@ index c8ff2e3..81e2f9a 100644
  
  $(OUTPUT_DIR)/%.o: %.c
  	$(CPP) $(CCFLAGS) -I./ -I$(OUTPUT_DIR) -I$(CUDA_INSTALL_PATH)/include  -c $< -o $@
+diff --git a/libcuda/cuda_api.h b/libcuda/cuda_api.h
+old mode 100644
+new mode 100755
+diff --git a/libcuda/cuda_api_object.h b/libcuda/cuda_api_object.h
+old mode 100644
+new mode 100755
 diff --git a/libcuda/cuda_runtime_api.cc b/libcuda/cuda_runtime_api.cc
-index fd05f55..16041ec 100644
+old mode 100644
+new mode 100755
+index fd05f55..7f1451d
 --- a/libcuda/cuda_runtime_api.cc
 +++ b/libcuda/cuda_runtime_api.cc
 @@ -108,6 +108,7 @@
@@ -11904,12 +12554,349 @@ index fd05f55..16041ec 100644
 +
 +    // write data to GPU memory.
 +    cudaMemcpy(__addr, interdata, __nbyte, cudaMemcpyHostToDevice);
-+    delete interdata;
++    delete[] interdata;
 +
 +    return cudaSuccess;
  }
+diff --git a/libcuda/cuobjdump.h b/libcuda/cuobjdump.h
+old mode 100644
+new mode 100755
+diff --git a/libcuda/cuobjdump.l b/libcuda/cuobjdump.l
+old mode 100644
+new mode 100755
+diff --git a/libcuda/cuobjdump.y b/libcuda/cuobjdump.y
+old mode 100644
+new mode 100755
+diff --git a/libcuda/gpgpu_context.h b/libcuda/gpgpu_context.h
+old mode 100644
+new mode 100755
+diff --git a/libopencl/Makefile b/libopencl/Makefile
+old mode 100644
+new mode 100755
+diff --git a/libopencl/nvopencl_wrapper.cc b/libopencl/nvopencl_wrapper.cc
+old mode 100644
+new mode 100755
+diff --git a/libopencl/opencl_runtime_api.cc b/libopencl/opencl_runtime_api.cc
+old mode 100644
+new mode 100755
+diff --git a/linux-so-version.txt b/linux-so-version.txt
+old mode 100644
+new mode 100755
+diff --git a/new b/new
+old mode 100644
+new mode 100755
+diff --git a/nightly.jenkinsfile b/nightly.jenkinsfile
+old mode 100644
+new mode 100755
+diff --git a/setup_environment b/setup_environment
+old mode 100644
+new mode 100755
+index 07d0788..5974ad0
+--- a/setup_environment
++++ b/setup_environment
+@@ -7,7 +7,7 @@ export GPGPUSIM_ROOT="$( cd "$( dirname "$BASH_SOURCE" )" && pwd )"
+ 
+ GPGPUSIM_VERSION_STRING=`cat $GPGPUSIM_ROOT/version | awk '/Version/ {print $8}'`
+ #Detect Git branch and commit #
+-GIT_COMMIT=`git --git-dir=$GPGPUSIM_ROOT/.git log -n 1 | head -1 | sed -re 's/commit (.*)/\1/'`
++GIT_COMMIT=`git --git-dir=$GPGPUSIM_ROOT/.git log --abbrev-commit -n 1 | head -1 | sed -re 's/commit (.*)/\1/'`
+ GIT_FILES_CHANGED=`git --git-dir=$GPGPUSIM_ROOT/.git diff --numstat | wc | sed -re 's/^\s+([0-9]+).*/\1./'`
+ GIT_FILES_CHANGED+=`git --git-dir=$GPGPUSIM_ROOT/.git diff --numstat --cached | wc | sed -re 's/^\s+([0-9]+).*/\1/'`
+ GPGPUSIM_BUILD_STRING="gpgpu-sim_git-commit-$GIT_COMMIT-modified_$GIT_FILES_CHANGED"
+@@ -16,17 +16,17 @@ echo -n "GPGPU-Sim version $GPGPUSIM_VERSION_STRING (build $GPGPUSIM_BUILD_STRIN
+ 
+ if [ ! -n "$CUDA_INSTALL_PATH" ]; then
+ 	echo "ERROR ** Install CUDA Toolkit and set CUDA_INSTALL_PATH.";
+-	return;
++	return 1;
+ fi
+ 
+ if [ ! -d "$CUDA_INSTALL_PATH" ]; then
+ 	echo "ERROR ** CUDA_INSTALL_PATH=$CUDA_INSTALL_PATH invalid (directory does not exist)";
+-	return;
++	return 1;
+ fi
+ 
+ if [ ! `uname` = "Linux" -a  ! `uname` = "Darwin" ]; then
+ 	echo "ERROR ** Unsupported platform: GPGPU-Sim $GPGPUSIM_VERSION_STRING developed and tested on Linux."
+-	return;
++	return 1;
+ fi
+ 
+ export PATH=`echo $PATH | sed "s#$GPGPUSIM_ROOT/bin:$CUDA_INSTALL_PATH/bin:##"`
+@@ -41,17 +41,16 @@ if [ $? = 1 ]; then
+ 	echo "         Try adding $CUDA_INSTALL_PATH/bin/ to your PATH environment variable.";
+ 	echo "         Please also be sure to read the README file if you have not done so.";
+ 	echo "";
+-	return;
++	return 1;
+ fi
+ 
+-CC_VERSION=`gcc --version | head -1 | awk '{for(i=1;i<=NF;i++){ if(match($i,/^[0-9]\.[0-9]\.[0-9]$/))  {print $i; exit 0}}}'`
++CC_VERSION=$(gcc --version | head -1 | awk '{for(i=1;i<=NF;i++){ if(match($i,/^[0-9]+\.[0-9]+\.[0-9]+$/)) {print $i; exit 0}}}')
+ 
+ CUDA_VERSION_STRING=`$CUDA_INSTALL_PATH/bin/nvcc --version | awk '/release/ {print $5;}' | sed 's/,//'`;
+ export CUDA_VERSION_NUMBER=`echo $CUDA_VERSION_STRING | sed 's/\./ /' | awk '{printf("%02u%02u", 10*int($1), 10*$2);}'`
+-if [ $CUDA_VERSION_NUMBER -gt 11100 -o $CUDA_VERSION_NUMBER -lt 2030  ]; then
+-	echo "ERROR ** GPGPU-Sim version $GPGPUSIM_VERSION_STRING not tested with CUDA version $CUDA_VERSION_STRING (please see README)";
++if [ $CUDA_VERSION_NUMBER -gt 12800 -o $CUDA_VERSION_NUMBER -lt 2030  ]; then
++	echo "WARNING ** GPGPU-Sim version $GPGPUSIM_VERSION_STRING not tested with CUDA version $CUDA_VERSION_STRING (please see README)";
+ 	echo $CUDA_VERSION_NUMBER
+-  return
+ fi
+ 
+ if [ $CUDA_VERSION_NUMBER -ge 6000 ]; then
+@@ -60,13 +59,18 @@ if [ $CUDA_VERSION_NUMBER -ge 6000 ]; then
+ 	export CUOBJDUMP_SIM_FILE=jj
+ fi
+ 
++# Simple configure, loop through all positional arguments
++# Default config
++export GPGPUSIM_CONFIG=gcc-$CC_VERSION/cuda-$CUDA_VERSION_NUMBER/release
+ 
+-if [ $# = '1' ] ;
+-then
+-    export GPGPUSIM_CONFIG=gcc-$CC_VERSION/cuda-$CUDA_VERSION_NUMBER/$1
+-else
+-    export GPGPUSIM_CONFIG=gcc-$CC_VERSION/cuda-$CUDA_VERSION_NUMBER/release
+-fi
++for opt in $@
++do
++	if [[ $opt == 'debug' ]] ; then
++		# Debug mode
++		echo -n "enabled debug mode "
++		export GPGPUSIM_CONFIG=gcc-$CC_VERSION/cuda-$CUDA_VERSION_NUMBER/$1
++	fi
++done
+ 
+ export QTINC=/usr/include
+ 
+@@ -117,25 +121,25 @@ fi
+ 
+ # The following checks to see if the GPGPU-Sim power model is enabled.
+ # GPGPUSIM_POWER_MODEL points to the directory where gpgpusim_mcpat is located.
+-# If this is not set, it checks the default directory "$GPGPUSIM_ROOT/src/gpuwattch/".
+-if [ -d $GPGPUSIM_ROOT/src/gpuwattch/ ]; then
+-	if [ ! -f $GPGPUSIM_ROOT/src/gpuwattch/gpgpu_sim.verify ]; then
+-		echo "ERROR ** gpgpu_sim.verify not found in $GPGPUSIM_ROOT/src/gpuwattch";
+-		return;
++# If this is not set, it checks the default directory "$GPGPUSIM_ROOT/src/accelwattch/".
++if [ -d $GPGPUSIM_ROOT/src/accelwattch/ ]; then
++	if [ ! -f $GPGPUSIM_ROOT/src/accelwattch/gpgpu_sim.verify ]; then
++		echo "ERROR ** gpgpu_sim.verify not found in $GPGPUSIM_ROOT/src/accelwattch";
++		return 1;
+ 	fi
+-	export GPGPUSIM_POWER_MODEL=$GPGPUSIM_ROOT/src/gpuwattch/;
+-	echo "configured with GPUWattch.";
++	export GPGPUSIM_POWER_MODEL=$GPGPUSIM_ROOT/src/accelwattch/;
++	echo "configured with AccelWattch.";
+ elif [ -n "$GPGPUSIM_POWER_MODEL" ]; then
+ 	if [ ! -f $GPGPUSIM_POWER_MODEL/gpgpu_sim.verify ]; then
+ 		echo "";
+-		echo "ERROR ** gpgpu_sim.verify not found in $GPGPUSIM_ROOT/src/gpuwattch/ - Either incorrect directory or incorrect McPAT version";
+-		return;
++		echo "ERROR ** gpgpu_sim.verify not found in $GPGPUSIM_ROOT/src/accelwattch/ - Either incorrect directory or incorrect McPAT version";
++		return 1;
+ 	fi
+ 	echo "configure with power model in $GPGPUSIM_POWER_MODEL.";
+ elif [ ! -d $GPGPUSIM_POWER_MODEL ]; then
+ 		echo "";
+ 		echo "ERROR ** GPGPUSIM_POWER_MODEL ($GPGPUSIM_POWER_MODEL) does not exist... Please set this to the gpgpusim_mcpat directory or unset this environment variable.";
+-		return;
++		return 1;
+ else
+ 	echo "configured without a power model.";
+ fi
+@@ -143,21 +147,26 @@ fi
+ if [ -z "$PTXAS_CUDA_INSTALL_PATH" ]; then
+     export PTXAS_CUDA_INSTALL_PATH=$CUDA_INSTALL_PATH;
+ fi
+-echo "";
+-echo "----------------------------------------------------------------------------";
+-echo "INFO - If you only care about PTX execution, ignore this message. GPGPU-Sim supports PTX execution in modern CUDA."
+-echo "If you want to run PTXPLUS (sm_1x SASS) with a modern card configuration - set the envronment variable"
+-echo "\$PTXAS_CUDA_INSTALL_PATH to point a CUDA version compabible with your card configurations (i.e. 8+ for PASCAL, 9+ for VOLTA etc..)"
+-echo "For example: \"export \$PTXAS_CUDA_INSTALL_PATH=/usr/local/cuda-9.1\""
+-echo ""
+-echo "The following text describes why:";
+-echo "If you are using PTXPLUS, only sm_1x is supported and it requires that the app and simulator binaries are compiled in CUDA 4.2 or less.";
+-echo "The simulator requires it since CUDA headers desribe struct sizes in the exec which change from gen to gen.";
+-echo "The apps require 4.2 because new versions of CUDA tools have dropped parsing support for generating sm_1x";
+-echo "When running using modern config (i.e. volta) and PTXPLUS with CUDA 4.2, the \$PTXAS_CUDA_INSTALL_PATH env variable is required to get proper register usage"
+-echo "(and hence occupancy) using a version of CUDA that knows the register usage on the real card."
+-echo "";
+-echo "----------------------------------------------------------------------------";
++
++# I am not sure PTXPlus really makes sense anymore and this verbose print to describe
++# how to use it is probably not aging well. The info in here is good though if you care
++# about PTXPlus, so I will leave it as a comment.
++#
++#echo "";
++#echo "----------------------------------------------------------------------------";
++#echo "INFO - If you only care about PTX execution or trace-based SASS execution, ignore this message."
++#echo "If you want to run PTXPLUS (sm_1x SASS) with a modern card configuration - set the envronment variable"
++#echo "\$PTXAS_CUDA_INSTALL_PATH to point a CUDA version compabible with your card configurations (i.e. 8+ for PASCAL, 9+ for VOLTA etc..)"
++#echo "For example: \"export \$PTXAS_CUDA_INSTALL_PATH=/usr/local/cuda-9.1\""
++#echo ""
++#echo "The following text describes why:";
++#echo "If you are using PTXPLUS, only sm_1x is supported and it requires that the app and simulator binaries are compiled in CUDA 4.2 or less.";
++#echo "The simulator requires it since CUDA headers desribe struct sizes in the exec which change from gen to gen.";
++#echo "The apps require 4.2 because new versions of CUDA tools have dropped parsing support for generating sm_1x";
++#echo "When running using modern config (i.e. volta) and PTXPLUS with CUDA 4.2, the \$PTXAS_CUDA_INSTALL_PATH env variable is required to get proper register usage"
++#echo "(and hence occupancy) using a version of CUDA that knows the register usage on the real card."
++#echo "";
++#echo "----------------------------------------------------------------------------";
+ 
+ echo "setup_environment succeeded";
+ 
+diff --git a/src/Makefile b/src/Makefile
+old mode 100644
+new mode 100755
+diff --git a/src/abstract_hardware_model.cc b/src/abstract_hardware_model.cc
+old mode 100644
+new mode 100755
+diff --git a/src/abstract_hardware_model.h b/src/abstract_hardware_model.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/Makefile b/src/cuda-sim/Makefile
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/cuda-math.h b/src/cuda-sim/cuda-math.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/cuda-sim.cc b/src/cuda-sim/cuda-sim.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/cuda-sim.h b/src/cuda-sim/cuda-sim.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/cuda_device_printf.cc b/src/cuda-sim/cuda_device_printf.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/cuda_device_printf.h b/src/cuda-sim/cuda_device_printf.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/cuda_device_runtime.cc b/src/cuda-sim/cuda_device_runtime.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/cuda_device_runtime.h b/src/cuda-sim/cuda_device_runtime.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/decuda_pred_table/decuda_pred_table.cc b/src/cuda-sim/decuda_pred_table/decuda_pred_table.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/decuda_pred_table/decuda_pred_table.h b/src/cuda-sim/decuda_pred_table/decuda_pred_table.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/half.h b/src/cuda-sim/half.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/half.hpp b/src/cuda-sim/half.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/instructions.cc b/src/cuda-sim/instructions.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/memory.cc b/src/cuda-sim/memory.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/memory.h b/src/cuda-sim/memory.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/opcodes.def b/src/cuda-sim/opcodes.def
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/opcodes.h b/src/cuda-sim/opcodes.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx-stats.cc b/src/cuda-sim/ptx-stats.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx-stats.h b/src/cuda-sim/ptx-stats.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx.l b/src/cuda-sim/ptx.l
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx.y b/src/cuda-sim/ptx.y
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx_ir.cc b/src/cuda-sim/ptx_ir.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx_ir.h b/src/cuda-sim/ptx_ir.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx_loader.cc b/src/cuda-sim/ptx_loader.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx_loader.h b/src/cuda-sim/ptx_loader.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx_parser.cc b/src/cuda-sim/ptx_parser.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx_parser.h b/src/cuda-sim/ptx_parser.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx_sim.cc b/src/cuda-sim/ptx_sim.cc
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptx_sim.h b/src/cuda-sim/ptx_sim.h
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptxinfo.l b/src/cuda-sim/ptxinfo.l
+old mode 100644
+new mode 100755
+diff --git a/src/cuda-sim/ptxinfo.y b/src/cuda-sim/ptxinfo.y
+old mode 100644
+new mode 100755
+diff --git a/src/debug.cc b/src/debug.cc
+old mode 100644
+new mode 100755
+diff --git a/src/debug.h b/src/debug.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/Makefile b/src/gpgpu-sim/Makefile
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/addrdec.cc b/src/gpgpu-sim/addrdec.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/addrdec.h b/src/gpgpu-sim/addrdec.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/delayqueue.h b/src/gpgpu-sim/delayqueue.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/dram.cc b/src/gpgpu-sim/dram.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/dram.h b/src/gpgpu-sim/dram.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/dram_sched.cc b/src/gpgpu-sim/dram_sched.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/dram_sched.h b/src/gpgpu-sim/dram_sched.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/gpu-cache.cc b/src/gpgpu-sim/gpu-cache.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/gpu-cache.h b/src/gpgpu-sim/gpu-cache.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/gpu-misc.cc b/src/gpgpu-sim/gpu-misc.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/gpu-misc.h b/src/gpgpu-sim/gpu-misc.h
+old mode 100644
+new mode 100755
 diff --git a/src/gpgpu-sim/gpu-sim.cc b/src/gpgpu-sim/gpu-sim.cc
-index 1650688..0eaa4c8 100644
+old mode 100644
+new mode 100755
+index 1650688..0eaa4c8
 --- a/src/gpgpu-sim/gpu-sim.cc
 +++ b/src/gpgpu-sim/gpu-sim.cc
 @@ -81,6 +81,10 @@ class gpgpu_sim_wrapper {};
@@ -11962,7 +12949,9 @@ index 1650688..0eaa4c8 100644
 +  g_chiplet_directly_set_cycle = true;
 +}
 diff --git a/src/gpgpu-sim/gpu-sim.h b/src/gpgpu-sim/gpu-sim.h
-index 2e6820d..5c0ce40 100644
+old mode 100644
+new mode 100755
+index 2e6820d..5c0ce40
 --- a/src/gpgpu-sim/gpu-sim.h
 +++ b/src/gpgpu-sim/gpu-sim.h
 @@ -565,6 +565,9 @@ class gpgpu_sim : public gpgpu_t {
@@ -11975,3 +12964,816 @@ index 2e6820d..5c0ce40 100644
   private:
    // clocks
    void reinit_clock_domains(void);
+diff --git a/src/gpgpu-sim/hashing.cc b/src/gpgpu-sim/hashing.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/hashing.h b/src/gpgpu-sim/hashing.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/histogram.cc b/src/gpgpu-sim/histogram.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/histogram.h b/src/gpgpu-sim/histogram.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/icnt_wrapper.cc b/src/gpgpu-sim/icnt_wrapper.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/icnt_wrapper.h b/src/gpgpu-sim/icnt_wrapper.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/l2cache.cc b/src/gpgpu-sim/l2cache.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/l2cache.h b/src/gpgpu-sim/l2cache.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/l2cache_trace.h b/src/gpgpu-sim/l2cache_trace.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/local_interconnect.cc b/src/gpgpu-sim/local_interconnect.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/local_interconnect.h b/src/gpgpu-sim/local_interconnect.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/mem_fetch.cc b/src/gpgpu-sim/mem_fetch.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/mem_fetch.h b/src/gpgpu-sim/mem_fetch.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/mem_fetch_status.tup b/src/gpgpu-sim/mem_fetch_status.tup
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/mem_latency_stat.cc b/src/gpgpu-sim/mem_latency_stat.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/mem_latency_stat.h b/src/gpgpu-sim/mem_latency_stat.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/power_interface.cc b/src/gpgpu-sim/power_interface.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/power_interface.h b/src/gpgpu-sim/power_interface.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/power_stat.cc b/src/gpgpu-sim/power_stat.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/power_stat.h b/src/gpgpu-sim/power_stat.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/scoreboard.cc b/src/gpgpu-sim/scoreboard.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/scoreboard.h b/src/gpgpu-sim/scoreboard.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/shader.cc b/src/gpgpu-sim/shader.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/shader.h b/src/gpgpu-sim/shader.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/shader_trace.h b/src/gpgpu-sim/shader_trace.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/stack.cc b/src/gpgpu-sim/stack.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/stack.h b/src/gpgpu-sim/stack.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/stat-tool.cc b/src/gpgpu-sim/stat-tool.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/stat-tool.h b/src/gpgpu-sim/stat-tool.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/stats.h b/src/gpgpu-sim/stats.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/traffic_breakdown.cc b/src/gpgpu-sim/traffic_breakdown.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/traffic_breakdown.h b/src/gpgpu-sim/traffic_breakdown.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/visualizer.cc b/src/gpgpu-sim/visualizer.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpu-sim/visualizer.h b/src/gpgpu-sim/visualizer.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpusim_entrypoint.cc b/src/gpgpusim_entrypoint.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpgpusim_entrypoint.h b/src/gpgpusim_entrypoint.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/Alpha21364.xml b/src/gpuwattch/Alpha21364.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/Niagara1.xml b/src/gpuwattch/Niagara1.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/Niagara1_sharing.xml b/src/gpuwattch/Niagara1_sharing.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/Niagara1_sharing_DC.xml b/src/gpuwattch/Niagara1_sharing_DC.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/Niagara1_sharing_SBT.xml b/src/gpuwattch/Niagara1_sharing_SBT.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/Niagara1_sharing_ST.xml b/src/gpuwattch/Niagara1_sharing_ST.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/Niagara2.xml b/src/gpuwattch/Niagara2.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/Penryn.xml b/src/gpuwattch/Penryn.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/README b/src/gpuwattch/README
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/XML_Parse.cc b/src/gpuwattch/XML_Parse.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/XML_Parse.h b/src/gpuwattch/XML_Parse.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/Xeon.xml b/src/gpuwattch/Xeon.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/arch_const.h b/src/gpuwattch/arch_const.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/array.cc b/src/gpuwattch/array.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/array.h b/src/gpuwattch/array.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/basic_components.cc b/src/gpuwattch/basic_components.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/basic_components.h b/src/gpuwattch/basic_components.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/README b/src/gpuwattch/cacti/README
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/Ucache.cc b/src/gpuwattch/cacti/Ucache.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/Ucache.h b/src/gpuwattch/cacti/Ucache.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/arbiter.cc b/src/gpuwattch/cacti/arbiter.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/arbiter.h b/src/gpuwattch/cacti/arbiter.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/area.cc b/src/gpuwattch/cacti/area.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/area.h b/src/gpuwattch/cacti/area.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/basic_circuit.cc b/src/gpuwattch/cacti/basic_circuit.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/basic_circuit.h b/src/gpuwattch/cacti/basic_circuit.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/cacti.i b/src/gpuwattch/cacti/cacti.i
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/cacti.mk b/src/gpuwattch/cacti/cacti.mk
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/cacti_interface.cc b/src/gpuwattch/cacti/cacti_interface.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/cacti_interface.h b/src/gpuwattch/cacti/cacti_interface.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/component.cc b/src/gpuwattch/cacti/component.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/component.h b/src/gpuwattch/cacti/component.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/const.h b/src/gpuwattch/cacti/const.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/crossbar.cc b/src/gpuwattch/cacti/crossbar.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/crossbar.h b/src/gpuwattch/cacti/crossbar.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/decoder.cc b/src/gpuwattch/cacti/decoder.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/decoder.h b/src/gpuwattch/cacti/decoder.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/highradix.cc b/src/gpuwattch/cacti/highradix.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/highradix.h b/src/gpuwattch/cacti/highradix.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/htree2.cc b/src/gpuwattch/cacti/htree2.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/htree2.h b/src/gpuwattch/cacti/htree2.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/io.cc b/src/gpuwattch/cacti/io.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/io.h b/src/gpuwattch/cacti/io.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/main.cc b/src/gpuwattch/cacti/main.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/makefile b/src/gpuwattch/cacti/makefile
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/nuca.cc b/src/gpuwattch/cacti/nuca.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/nuca.h b/src/gpuwattch/cacti/nuca.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/out_batch_test_result.csv b/src/gpuwattch/cacti/out_batch_test_result.csv
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/parameter.cc b/src/gpuwattch/cacti/parameter.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/parameter.h b/src/gpuwattch/cacti/parameter.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/router.cc b/src/gpuwattch/cacti/router.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/router.h b/src/gpuwattch/cacti/router.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/technology.cc b/src/gpuwattch/cacti/technology.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/wire.cc b/src/gpuwattch/cacti/wire.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/cacti/wire.h b/src/gpuwattch/cacti/wire.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/core.cc b/src/gpuwattch/core.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/core.h b/src/gpuwattch/core.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/globalvar.h b/src/gpuwattch/globalvar.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/gpgpu.xml b/src/gpuwattch/gpgpu.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/gpgpu_sim.verify b/src/gpuwattch/gpgpu_sim.verify
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/gpgpu_sim_wrapper.cc b/src/gpuwattch/gpgpu_sim_wrapper.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/gpgpu_sim_wrapper.h b/src/gpuwattch/gpgpu_sim_wrapper.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/gpgpu_static.xml b/src/gpuwattch/gpgpu_static.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/interconnect.cc b/src/gpuwattch/interconnect.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/interconnect.h b/src/gpuwattch/interconnect.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/iocontrollers.cc b/src/gpuwattch/iocontrollers.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/iocontrollers.h b/src/gpuwattch/iocontrollers.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/logic.cc b/src/gpuwattch/logic.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/logic.h b/src/gpuwattch/logic.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/main.cc b/src/gpuwattch/main.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/makefile b/src/gpuwattch/makefile
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/mcpat.mk b/src/gpuwattch/mcpat.mk
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/mcpatXeonCore.mk b/src/gpuwattch/mcpatXeonCore.mk
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/memoryctrl.cc b/src/gpuwattch/memoryctrl.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/memoryctrl.h b/src/gpuwattch/memoryctrl.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/noc.cc b/src/gpuwattch/noc.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/noc.h b/src/gpuwattch/noc.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/processor.cc b/src/gpuwattch/processor.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/processor.h b/src/gpuwattch/processor.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/quadro.xml b/src/gpuwattch/quadro.xml
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/results/Alpha21364 b/src/gpuwattch/results/Alpha21364
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/results/Alpha21364_90nm b/src/gpuwattch/results/Alpha21364_90nm
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/results/Penryn b/src/gpuwattch/results/Penryn
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/results/T1 b/src/gpuwattch/results/T1
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/results/T1_DC_64 b/src/gpuwattch/results/T1_DC_64
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/results/T1_SBT_64 b/src/gpuwattch/results/T1_SBT_64
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/results/T1_ST_64 b/src/gpuwattch/results/T1_ST_64
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/results/T2 b/src/gpuwattch/results/T2
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/results/Xeon_core b/src/gpuwattch/results/Xeon_core
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/results/Xeon_uncore b/src/gpuwattch/results/Xeon_uncore
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/sharedcache.cc b/src/gpuwattch/sharedcache.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/sharedcache.h b/src/gpuwattch/sharedcache.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/technology_xeon_core.cc b/src/gpuwattch/technology_xeon_core.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/version.h b/src/gpuwattch/version.h
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/xmlParser.cc b/src/gpuwattch/xmlParser.cc
+old mode 100644
+new mode 100755
+diff --git a/src/gpuwattch/xmlParser.h b/src/gpuwattch/xmlParser.h
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/Makefile b/src/intersim2/Makefile
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/allocator.cpp b/src/intersim2/allocators/allocator.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/allocator.hpp b/src/intersim2/allocators/allocator.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/islip.cpp b/src/intersim2/allocators/islip.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/islip.hpp b/src/intersim2/allocators/islip.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/loa.cpp b/src/intersim2/allocators/loa.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/loa.hpp b/src/intersim2/allocators/loa.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/maxsize.cpp b/src/intersim2/allocators/maxsize.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/maxsize.hpp b/src/intersim2/allocators/maxsize.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/pim.cpp b/src/intersim2/allocators/pim.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/pim.hpp b/src/intersim2/allocators/pim.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/selalloc.cpp b/src/intersim2/allocators/selalloc.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/selalloc.hpp b/src/intersim2/allocators/selalloc.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/separable.cpp b/src/intersim2/allocators/separable.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/separable.hpp b/src/intersim2/allocators/separable.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/separable_input_first.cpp b/src/intersim2/allocators/separable_input_first.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/separable_input_first.hpp b/src/intersim2/allocators/separable_input_first.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/separable_output_first.cpp b/src/intersim2/allocators/separable_output_first.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/separable_output_first.hpp b/src/intersim2/allocators/separable_output_first.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/wavefront.cpp b/src/intersim2/allocators/wavefront.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/allocators/wavefront.hpp b/src/intersim2/allocators/wavefront.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/arbiters/arbiter.cpp b/src/intersim2/arbiters/arbiter.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/arbiters/arbiter.hpp b/src/intersim2/arbiters/arbiter.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/arbiters/matrix_arb.cpp b/src/intersim2/arbiters/matrix_arb.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/arbiters/matrix_arb.hpp b/src/intersim2/arbiters/matrix_arb.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/arbiters/prio_arb.cpp b/src/intersim2/arbiters/prio_arb.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/arbiters/prio_arb.hpp b/src/intersim2/arbiters/prio_arb.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/arbiters/roundrobin_arb.cpp b/src/intersim2/arbiters/roundrobin_arb.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/arbiters/roundrobin_arb.hpp b/src/intersim2/arbiters/roundrobin_arb.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/arbiters/tree_arb.cpp b/src/intersim2/arbiters/tree_arb.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/arbiters/tree_arb.hpp b/src/intersim2/arbiters/tree_arb.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/batchtrafficmanager.cpp b/src/intersim2/batchtrafficmanager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/batchtrafficmanager.hpp b/src/intersim2/batchtrafficmanager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/booksim.hpp b/src/intersim2/booksim.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/booksim_config.cpp b/src/intersim2/booksim_config.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/booksim_config.hpp b/src/intersim2/booksim_config.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/buffer.cpp b/src/intersim2/buffer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/buffer.hpp b/src/intersim2/buffer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/buffer_state.cpp b/src/intersim2/buffer_state.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/buffer_state.hpp b/src/intersim2/buffer_state.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/channel.hpp b/src/intersim2/channel.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/config.l b/src/intersim2/config.l
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/config.y b/src/intersim2/config.y
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/config_utils.cpp b/src/intersim2/config_utils.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/config_utils.hpp b/src/intersim2/config_utils.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/credit.cpp b/src/intersim2/credit.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/credit.hpp b/src/intersim2/credit.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/examples/cmeshconfig b/src/intersim2/examples/cmeshconfig
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/examples/dragonflyconfig b/src/intersim2/examples/dragonflyconfig
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/examples/fattree_config b/src/intersim2/examples/fattree_config
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/examples/flatflyconfig b/src/intersim2/examples/flatflyconfig
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/examples/mesh88_lat b/src/intersim2/examples/mesh88_lat
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/examples/singleconfig b/src/intersim2/examples/singleconfig
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/examples/torus88 b/src/intersim2/examples/torus88
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/flit.cpp b/src/intersim2/flit.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/flit.hpp b/src/intersim2/flit.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/flitchannel.cpp b/src/intersim2/flitchannel.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/flitchannel.hpp b/src/intersim2/flitchannel.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/globals.hpp b/src/intersim2/globals.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/gputrafficmanager.cpp b/src/intersim2/gputrafficmanager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/gputrafficmanager.hpp b/src/intersim2/gputrafficmanager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/injection.cpp b/src/intersim2/injection.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/injection.hpp b/src/intersim2/injection.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/interconnect_interface.cpp b/src/intersim2/interconnect_interface.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/interconnect_interface.hpp b/src/intersim2/interconnect_interface.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/intersim_config.cpp b/src/intersim2/intersim_config.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/intersim_config.hpp b/src/intersim2/intersim_config.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/main.cpp b/src/intersim2/main.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/misc_utils.cpp b/src/intersim2/misc_utils.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/misc_utils.hpp b/src/intersim2/misc_utils.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/module.cpp b/src/intersim2/module.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/module.hpp b/src/intersim2/module.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/anynet.cpp b/src/intersim2/networks/anynet.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/anynet.hpp b/src/intersim2/networks/anynet.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/cmesh.cpp b/src/intersim2/networks/cmesh.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/cmesh.hpp b/src/intersim2/networks/cmesh.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/dragonfly.cpp b/src/intersim2/networks/dragonfly.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/dragonfly.hpp b/src/intersim2/networks/dragonfly.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/fattree.cpp b/src/intersim2/networks/fattree.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/fattree.hpp b/src/intersim2/networks/fattree.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/flatfly_onchip.cpp b/src/intersim2/networks/flatfly_onchip.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/flatfly_onchip.hpp b/src/intersim2/networks/flatfly_onchip.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/fly.cpp b/src/intersim2/networks/fly.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/fly.hpp b/src/intersim2/networks/fly.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/kncube.cpp b/src/intersim2/networks/kncube.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/kncube.hpp b/src/intersim2/networks/kncube.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/network.cpp b/src/intersim2/networks/network.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/network.hpp b/src/intersim2/networks/network.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/qtree.cpp b/src/intersim2/networks/qtree.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/qtree.hpp b/src/intersim2/networks/qtree.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/tree4.cpp b/src/intersim2/networks/tree4.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/networks/tree4.hpp b/src/intersim2/networks/tree4.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/outputset.cpp b/src/intersim2/outputset.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/outputset.hpp b/src/intersim2/outputset.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/packet_reply_info.cpp b/src/intersim2/packet_reply_info.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/packet_reply_info.hpp b/src/intersim2/packet_reply_info.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/pipefifo.hpp b/src/intersim2/pipefifo.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/power/buffer_monitor.cpp b/src/intersim2/power/buffer_monitor.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/power/buffer_monitor.hpp b/src/intersim2/power/buffer_monitor.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/power/power_module.cpp b/src/intersim2/power/power_module.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/power/power_module.hpp b/src/intersim2/power/power_module.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/power/switch_monitor.cpp b/src/intersim2/power/switch_monitor.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/power/switch_monitor.hpp b/src/intersim2/power/switch_monitor.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/random_utils.hpp b/src/intersim2/random_utils.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/rng-double.c b/src/intersim2/rng-double.c
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/rng.c b/src/intersim2/rng.c
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/rng_double_wrapper.cpp b/src/intersim2/rng_double_wrapper.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/rng_wrapper.cpp b/src/intersim2/rng_wrapper.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/routefunc.cpp b/src/intersim2/routefunc.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/routefunc.hpp b/src/intersim2/routefunc.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/routers/chaos_router.cpp b/src/intersim2/routers/chaos_router.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/routers/chaos_router.hpp b/src/intersim2/routers/chaos_router.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/routers/event_router.cpp b/src/intersim2/routers/event_router.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/routers/event_router.hpp b/src/intersim2/routers/event_router.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/routers/iq_router.cpp b/src/intersim2/routers/iq_router.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/routers/iq_router.hpp b/src/intersim2/routers/iq_router.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/routers/router.cpp b/src/intersim2/routers/router.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/routers/router.hpp b/src/intersim2/routers/router.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/stats.cpp b/src/intersim2/stats.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/stats.hpp b/src/intersim2/stats.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/timed_module.hpp b/src/intersim2/timed_module.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/traffic.cpp b/src/intersim2/traffic.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/traffic.hpp b/src/intersim2/traffic.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/trafficmanager.cpp b/src/intersim2/trafficmanager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/trafficmanager.hpp b/src/intersim2/trafficmanager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/vc.cpp b/src/intersim2/vc.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/intersim2/vc.hpp b/src/intersim2/vc.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/option_parser.cc b/src/option_parser.cc
+old mode 100644
+new mode 100755
+diff --git a/src/option_parser.h b/src/option_parser.h
+old mode 100644
+new mode 100755
+diff --git a/src/statwrapper.cc b/src/statwrapper.cc
+old mode 100644
+new mode 100755
+diff --git a/src/statwrapper.h b/src/statwrapper.h
+old mode 100644
+new mode 100755
+diff --git a/src/stream_manager.cc b/src/stream_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/src/stream_manager.h b/src/stream_manager.h
+old mode 100644
+new mode 100755
+diff --git a/src/tr1_hash_map.h b/src/tr1_hash_map.h
+old mode 100644
+new mode 100755
+diff --git a/src/trace.cc b/src/trace.cc
+old mode 100644
+new mode 100755
+diff --git a/src/trace.h b/src/trace.h
+old mode 100644
+new mode 100755
+diff --git a/src/trace_streams.tup b/src/trace_streams.tup
+old mode 100644
+new mode 100755
+diff --git a/version b/version
+old mode 100644
+new mode 100755
+diff --git a/version_detection.mk b/version_detection.mk
+old mode 100644
+new mode 100755

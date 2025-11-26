@@ -23,6 +23,7 @@ enum SysCallID {
     SYSCALL_UNLOCK = 505,        // Unlock mutex.
     SYSCALL_REMOTE_READ = 506,   // Read cross chiplet
     SYSCALL_REMOTE_WRITE = 507,  // Write cross chiplet
+    SYSCALL_SYNC = 508,
 };
 
 /**

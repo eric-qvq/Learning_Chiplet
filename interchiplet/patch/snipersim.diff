@@ -1,5 +1,88 @@
+diff --git a/.gitignore b/.gitignore
+old mode 100644
+new mode 100755
+diff --git a/CHANGELOG b/CHANGELOG
+old mode 100644
+new mode 100755
+diff --git a/COMPILATION b/COMPILATION
+old mode 100644
+new mode 100755
+diff --git a/CONTRIBUTORS b/CONTRIBUTORS
+old mode 100644
+new mode 100755
+diff --git a/Doxyfile b/Doxyfile
+old mode 100644
+new mode 100755
+diff --git a/LICENSE b/LICENSE
+old mode 100644
+new mode 100755
+diff --git a/LICENSE.academic b/LICENSE.academic
+old mode 100644
+new mode 100755
+diff --git a/Makefile b/Makefile
+old mode 100644
+new mode 100755
+diff --git a/Makefile.config b/Makefile.config
+old mode 100644
+new mode 100755
+diff --git a/NOTICE b/NOTICE
+old mode 100644
+new mode 100755
+diff --git a/README b/README
+old mode 100644
+new mode 100755
+diff --git a/README.arm64 b/README.arm64
+old mode 100644
+new mode 100755
+diff --git a/README.riscv b/README.riscv
+old mode 100644
+new mode 100755
+diff --git a/common/Makefile b/common/Makefile
+old mode 100644
+new mode 100755
+diff --git a/common/Makefile.common b/common/Makefile.common
+old mode 100644
+new mode 100755
+diff --git a/common/config/config.cpp b/common/config/config.cpp
+old mode 100644
+new mode 100755
+diff --git a/common/config/config.hpp b/common/config/config.hpp
+old mode 100644
+new mode 100755
+diff --git a/common/config/config_exceptions.hpp b/common/config/config_exceptions.hpp
+old mode 100644
+new mode 100755
+diff --git a/common/config/config_file.cpp b/common/config/config_file.cpp
+old mode 100644
+new mode 100755
+diff --git a/common/config/config_file.hpp b/common/config/config_file.hpp
+old mode 100644
+new mode 100755
+diff --git a/common/config/config_file_grammar.hpp b/common/config/config_file_grammar.hpp
+old mode 100644
+new mode 100755
+diff --git a/common/config/key.hpp b/common/config/key.hpp
+old mode 100644
+new mode 100755
+diff --git a/common/config/section.cpp b/common/config/section.cpp
+old mode 100644
+new mode 100755
+diff --git a/common/config/section.hpp b/common/config/section.hpp
+old mode 100644
+new mode 100755
+diff --git a/common/core/README b/common/core/README
+old mode 100644
+new mode 100755
+diff --git a/common/core/bbv_count.cc b/common/core/bbv_count.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/bbv_count.h b/common/core/bbv_count.h
+old mode 100644
+new mode 100755
 diff --git a/common/core/core.cc b/common/core/core.cc
-index 33f7f92..221ede4 100644
+old mode 100644
+new mode 100755
+index 33f7f92..221ede4
 --- a/common/core/core.cc
 +++ b/common/core/core.cc
 @@ -19,6 +19,8 @@
@@ -25,8 +108,289 @@ index 33f7f92..221ede4 100644
     getShmemPerfModel()->disable();
     getMemoryManager()->disableModels();
     getNetwork()->disableModels();
+diff --git a/common/core/core.h b/common/core/core.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/address_home_lookup.cc b/common/core/memory_subsystem/address_home_lookup.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/address_home_lookup.h b/common/core/memory_subsystem/address_home_lookup.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache.cc b/common/core/memory_subsystem/cache/cache.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache.h b/common/core/memory_subsystem/cache/cache.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_base.cc b/common/core/memory_subsystem/cache/cache_base.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_base.h b/common/core/memory_subsystem/cache/cache_base.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_block_info.cc b/common/core/memory_subsystem/cache/cache_block_info.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_block_info.h b/common/core/memory_subsystem/cache/cache_block_info.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set.cc b/common/core/memory_subsystem/cache/cache_set.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set.h b/common/core/memory_subsystem/cache/cache_set.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_lru.cc b/common/core/memory_subsystem/cache/cache_set_lru.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_lru.h b/common/core/memory_subsystem/cache/cache_set_lru.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_mru.cc b/common/core/memory_subsystem/cache/cache_set_mru.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_mru.h b/common/core/memory_subsystem/cache/cache_set_mru.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_nmru.cc b/common/core/memory_subsystem/cache/cache_set_nmru.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_nmru.h b/common/core/memory_subsystem/cache/cache_set_nmru.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_nru.cc b/common/core/memory_subsystem/cache/cache_set_nru.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_nru.h b/common/core/memory_subsystem/cache/cache_set_nru.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_plru.cc b/common/core/memory_subsystem/cache/cache_set_plru.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_plru.h b/common/core/memory_subsystem/cache/cache_set_plru.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_random.cc b/common/core/memory_subsystem/cache/cache_set_random.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_random.h b/common/core/memory_subsystem/cache/cache_set_random.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_round_robin.cc b/common/core/memory_subsystem/cache/cache_set_round_robin.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_round_robin.h b/common/core/memory_subsystem/cache/cache_set_round_robin.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_srrip.cc b/common/core/memory_subsystem/cache/cache_set_srrip.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_set_srrip.h b/common/core/memory_subsystem/cache/cache_set_srrip.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/cache_state.h b/common/core/memory_subsystem/cache/cache_state.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/pr_l1_cache_block_info.h b/common/core/memory_subsystem/cache/pr_l1_cache_block_info.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/pr_l2_cache_block_info.cc b/common/core/memory_subsystem/cache/pr_l2_cache_block_info.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/pr_l2_cache_block_info.h b/common/core/memory_subsystem/cache/pr_l2_cache_block_info.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/req_queue_list_template.h b/common/core/memory_subsystem/cache/req_queue_list_template.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/shared_cache_block_info.cc b/common/core/memory_subsystem/cache/shared_cache_block_info.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cache/shared_cache_block_info.h b/common/core/memory_subsystem/cache/shared_cache_block_info.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cheetah/cheetah_manager.cc b/common/core/memory_subsystem/cheetah/cheetah_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cheetah/cheetah_manager.h b/common/core/memory_subsystem/cheetah/cheetah_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cheetah/cheetah_model.cc b/common/core/memory_subsystem/cheetah/cheetah_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cheetah/cheetah_model.h b/common/core/memory_subsystem/cheetah/cheetah_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cheetah/saclru.cc b/common/core/memory_subsystem/cheetah/saclru.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cheetah/saclru.h b/common/core/memory_subsystem/cheetah/saclru.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cheetah/util.cc b/common/core/memory_subsystem/cheetah/util.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/cheetah/util.h b/common/core/memory_subsystem/cheetah/util.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/directory_schemes/coherency_protocol.h b/common/core/memory_subsystem/directory_schemes/coherency_protocol.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/directory_schemes/directory.cc b/common/core/memory_subsystem/directory_schemes/directory.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/directory_schemes/directory.h b/common/core/memory_subsystem/directory_schemes/directory.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/directory_schemes/directory_block_info.h b/common/core/memory_subsystem/directory_schemes/directory_block_info.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/directory_schemes/directory_entry.h b/common/core/memory_subsystem/directory_schemes/directory_entry.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/directory_schemes/directory_entry_limited_no_broadcast.h b/common/core/memory_subsystem/directory_schemes/directory_entry_limited_no_broadcast.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/directory_schemes/directory_entry_limitless.h b/common/core/memory_subsystem/directory_schemes/directory_entry_limitless.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/directory_schemes/directory_state.h b/common/core/memory_subsystem/directory_schemes/directory_state.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/dram/dram_cache.cc b/common/core/memory_subsystem/dram/dram_cache.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/dram/dram_cache.h b/common/core/memory_subsystem/dram/dram_cache.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/dram/dram_cntlr_interface.cc b/common/core/memory_subsystem/dram/dram_cntlr_interface.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/dram/dram_cntlr_interface.h b/common/core/memory_subsystem/dram/dram_cntlr_interface.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/fast_nehalem/fast_cache.h b/common/core/memory_subsystem/fast_nehalem/fast_cache.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/fast_nehalem/memory_manager.cc b/common/core/memory_subsystem/fast_nehalem/memory_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/fast_nehalem/memory_manager.h b/common/core/memory_subsystem/fast_nehalem/memory_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/mem_component.cc b/common/core/memory_subsystem/mem_component.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/mem_component.h b/common/core/memory_subsystem/mem_component.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/memory_manager_base.cc b/common/core/memory_subsystem/memory_manager_base.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/memory_manager_base.h b/common/core/memory_subsystem/memory_manager_base.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/memory_manager_fast.h b/common/core/memory_subsystem/memory_manager_fast.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/a53prefetcher.cc b/common/core/memory_subsystem/parametric_dram_directory_msi/a53prefetcher.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/a53prefetcher.h b/common/core/memory_subsystem/parametric_dram_directory_msi/a53prefetcher.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/cache_atd.cc b/common/core/memory_subsystem/parametric_dram_directory_msi/cache_atd.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/cache_atd.h b/common/core/memory_subsystem/parametric_dram_directory_msi/cache_atd.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/cache_cntlr.cc b/common/core/memory_subsystem/parametric_dram_directory_msi/cache_cntlr.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/cache_cntlr.h b/common/core/memory_subsystem/parametric_dram_directory_msi/cache_cntlr.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/ghb_prefetcher.cc b/common/core/memory_subsystem/parametric_dram_directory_msi/ghb_prefetcher.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/ghb_prefetcher.h b/common/core/memory_subsystem/parametric_dram_directory_msi/ghb_prefetcher.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/memory_manager.cc b/common/core/memory_subsystem/parametric_dram_directory_msi/memory_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/memory_manager.h b/common/core/memory_subsystem/parametric_dram_directory_msi/memory_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/nuca_cache.cc b/common/core/memory_subsystem/parametric_dram_directory_msi/nuca_cache.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/nuca_cache.h b/common/core/memory_subsystem/parametric_dram_directory_msi/nuca_cache.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/prefetcher.cc b/common/core/memory_subsystem/parametric_dram_directory_msi/prefetcher.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/prefetcher.h b/common/core/memory_subsystem/parametric_dram_directory_msi/prefetcher.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/simple_prefetcher.cc b/common/core/memory_subsystem/parametric_dram_directory_msi/simple_prefetcher.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/simple_prefetcher.h b/common/core/memory_subsystem/parametric_dram_directory_msi/simple_prefetcher.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/tlb.cc b/common/core/memory_subsystem/parametric_dram_directory_msi/tlb.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/parametric_dram_directory_msi/tlb.h b/common/core/memory_subsystem/parametric_dram_directory_msi/tlb.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_cntlr.cc b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_cntlr.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_cntlr.h b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_cntlr.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_directory_cache.cc b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_directory_cache.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_directory_cache.h b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_directory_cache.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_directory_cntlr.cc b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_directory_cntlr.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_directory_cntlr.h b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_directory_cntlr.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/req_queue_list.h b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/req_queue_list.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_msg.cc b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_msg.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_msg.h b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_msg.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_perf.cc b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_perf.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_perf.h b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_perf.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_req.cc b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_req.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_req.h b/common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_req.h
+old mode 100644
+new mode 100755
 diff --git a/common/core/syscall_model.cc b/common/core/syscall_model.cc
-index c336283..0e8ef1a 100644
+old mode 100644
+new mode 100755
+index c336283..0e8ef1a
 --- a/common/core/syscall_model.cc
 +++ b/common/core/syscall_model.cc
 @@ -14,6 +14,7 @@
@@ -189,8 +553,1639 @@ index c336283..0e8ef1a 100644
        case static_cast<unsigned long>(-1):
        default:
           break;
+diff --git a/common/core/syscall_model.h b/common/core/syscall_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/thread.cc b/common/core/thread.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/thread.h b/common/core/thread.h
+old mode 100644
+new mode 100755
+diff --git a/common/core/topology_info.cc b/common/core/topology_info.cc
+old mode 100644
+new mode 100755
+diff --git a/common/core/topology_info.h b/common/core/topology_info.h
+old mode 100644
+new mode 100755
+diff --git a/common/fault_injection/fault_injection.cc b/common/fault_injection/fault_injection.cc
+old mode 100644
+new mode 100755
+diff --git a/common/fault_injection/fault_injection.h b/common/fault_injection/fault_injection.h
+old mode 100644
+new mode 100755
+diff --git a/common/fault_injection/fault_injector_random.cc b/common/fault_injection/fault_injector_random.cc
+old mode 100644
+new mode 100755
+diff --git a/common/fault_injection/fault_injector_random.h b/common/fault_injection/fault_injector_random.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/FSBAllocator.hh b/common/misc/FSBAllocator.hh
+old mode 100644
+new mode 100755
+diff --git a/common/misc/README b/common/misc/README
+old mode 100644
+new mode 100755
+diff --git a/common/misc/_thread.h b/common/misc/_thread.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/allocator.h b/common/misc/allocator.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/average.h b/common/misc/average.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/barrier.cc b/common/misc/barrier.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/barrier.h b/common/misc/barrier.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/basic_hash.cc b/common/misc/basic_hash.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/basic_hash.h b/common/misc/basic_hash.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/bit_vector.cc b/common/misc/bit_vector.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/bit_vector.h b/common/misc/bit_vector.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/bottlegraph.cc b/common/misc/bottlegraph.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/bottlegraph.h b/common/misc/bottlegraph.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/callstack.cc b/common/misc/callstack.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/callstack.h b/common/misc/callstack.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/checksum.cc b/common/misc/checksum.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/checksum.h b/common/misc/checksum.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/circular_log.cc b/common/misc/circular_log.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/circular_log.h b/common/misc/circular_log.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/circular_queue.h b/common/misc/circular_queue.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/cond.cc b/common/misc/cond.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/cond.h b/common/misc/cond.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/config.cc b/common/misc/config.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/config.h b/common/misc/config.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/cpuid.h b/common/misc/cpuid.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/distribution.h b/common/misc/distribution.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/fixed_point.h b/common/misc/fixed_point.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/fixed_types.h b/common/misc/fixed_types.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/fxsupport.cc b/common/misc/fxsupport.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/fxsupport.h b/common/misc/fxsupport.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/handle_args.cc b/common/misc/handle_args.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/handle_args.h b/common/misc/handle_args.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/hash_map_set.h b/common/misc/hash_map_set.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/itostr.h b/common/misc/itostr.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/lock.h b/common/misc/lock.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/locked_hash.cc b/common/misc/locked_hash.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/locked_hash.h b/common/misc/locked_hash.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/lockfree_hash.cc b/common/misc/lockfree_hash.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/lockfree_hash.h b/common/misc/lockfree_hash.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/log.cc b/common/misc/log.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/log.h b/common/misc/log.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/logmem.cc b/common/misc/logmem.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/logmem.h b/common/misc/logmem.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/memguard.cc b/common/misc/memguard.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/memguard.h b/common/misc/memguard.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/modulo_num.cc b/common/misc/modulo_num.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/modulo_num.h b/common/misc/modulo_num.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/moving_average.h b/common/misc/moving_average.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/mt_circular_queue.h b/common/misc/mt_circular_queue.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/os_compat.h b/common/misc/os_compat.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/packetize.cc b/common/misc/packetize.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/packetize.h b/common/misc/packetize.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/progress.cc b/common/misc/progress.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/progress.h b/common/misc/progress.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/pthread_lock.cc b/common/misc/pthread_lock.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/pthread_lock.h b/common/misc/pthread_lock.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/pthread_thread.cc b/common/misc/pthread_thread.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/pthread_thread.h b/common/misc/pthread_thread.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/pthread_tls.cc b/common/misc/pthread_tls.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/random.h b/common/misc/random.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/rng.h b/common/misc/rng.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/selock.cc b/common/misc/selock.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/selock.h b/common/misc/selock.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/semaphore.cc b/common/misc/semaphore.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/semaphore.h b/common/misc/semaphore.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/setlock.cc b/common/misc/setlock.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/setlock.h b/common/misc/setlock.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/spin_loop_detector.cc b/common/misc/spin_loop_detector.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/spin_loop_detector.h b/common/misc/spin_loop_detector.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/spinlock.h b/common/misc/spinlock.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/stable_iterator.h b/common/misc/stable_iterator.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/stats.cc b/common/misc/stats.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/stats.h b/common/misc/stats.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/subsecond_time.cc b/common/misc/subsecond_time.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/subsecond_time.h b/common/misc/subsecond_time.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/subsecond_time_c.cc b/common/misc/subsecond_time_c.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/subsecond_time_c.h b/common/misc/subsecond_time_c.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/syscall_strings.cc b/common/misc/syscall_strings.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/syscall_strings.h b/common/misc/syscall_strings.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/tags.cc b/common/misc/tags.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/tags.h b/common/misc/tags.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/timer.cc b/common/misc/timer.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/timer.h b/common/misc/timer.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/tls.cc b/common/misc/tls.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/tls.h b/common/misc/tls.h
+old mode 100644
+new mode 100755
+diff --git a/common/misc/utils.cc b/common/misc/utils.cc
+old mode 100644
+new mode 100755
+diff --git a/common/misc/utils.h b/common/misc/utils.h
+old mode 100644
+new mode 100755
+diff --git a/common/network/README b/common/network/README
+old mode 100644
+new mode 100755
+diff --git a/common/network/network.cc b/common/network/network.cc
+old mode 100644
+new mode 100755
+diff --git a/common/network/network.h b/common/network/network.h
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_model.cc b/common/network/network_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_model.h b/common/network/network_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_model_bus.cc b/common/network/network_model_bus.cc
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_model_bus.h b/common/network/network_model_bus.h
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_model_emesh_hop_by_hop.cc b/common/network/network_model_emesh_hop_by_hop.cc
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_model_emesh_hop_by_hop.h b/common/network/network_model_emesh_hop_by_hop.h
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_model_emesh_hop_counter.cc b/common/network/network_model_emesh_hop_counter.cc
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_model_emesh_hop_counter.h b/common/network/network_model_emesh_hop_counter.h
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_model_magic.cc b/common/network/network_model_magic.cc
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_model_magic.h b/common/network/network_model_magic.h
+old mode 100644
+new mode 100755
+diff --git a/common/network/network_types.h b/common/network/network_types.h
+old mode 100644
+new mode 100755
+diff --git a/common/network/packet_type.cc b/common/network/packet_type.cc
+old mode 100644
+new mode 100755
+diff --git a/common/network/packet_type.h b/common/network/packet_type.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictor.cc b/common/performance_model/branch_predictor.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictor.h b/common/performance_model/branch_predictor.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/Makefile b/common/performance_model/branch_predictors/Makefile
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/a53branchpredictor.cc b/common/performance_model/branch_predictors/a53branchpredictor.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/a53branchpredictor.h b/common/performance_model/branch_predictors/a53branchpredictor.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/branch_predictor_return_value.cc b/common/performance_model/branch_predictors/branch_predictor_return_value.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/branch_predictor_return_value.h b/common/performance_model/branch_predictors/branch_predictor_return_value.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/btb.h b/common/performance_model/branch_predictors/btb.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/global_predictor.h b/common/performance_model/branch_predictors/global_predictor.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/ibtb.h b/common/performance_model/branch_predictors/ibtb.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/lpb.h b/common/performance_model/branch_predictors/lpb.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/one_bit_branch_predictor.cc b/common/performance_model/branch_predictors/one_bit_branch_predictor.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/one_bit_branch_predictor.h b/common/performance_model/branch_predictors/one_bit_branch_predictor.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/pentium_m_bimodal_table.h b/common/performance_model/branch_predictors/pentium_m_bimodal_table.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/pentium_m_branch_predictor.cc b/common/performance_model/branch_predictors/pentium_m_branch_predictor.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/pentium_m_branch_predictor.h b/common/performance_model/branch_predictors/pentium_m_branch_predictor.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/pentium_m_branch_target_buffer.h b/common/performance_model/branch_predictors/pentium_m_branch_target_buffer.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/pentium_m_global_predictor.h b/common/performance_model/branch_predictors/pentium_m_global_predictor.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/pentium_m_indirect_branch_target_buffer.h b/common/performance_model/branch_predictors/pentium_m_indirect_branch_target_buffer.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/pentium_m_loop_branch_predictor.h b/common/performance_model/branch_predictors/pentium_m_loop_branch_predictor.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/saturating_predictor.h b/common/performance_model/branch_predictors/saturating_predictor.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/branch_predictors/simple_bimodal_table.h b/common/performance_model/branch_predictors/simple_bimodal_table.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/cache_perf_model.cc b/common/performance_model/cache_perf_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/cache_perf_model.h b/common/performance_model/cache_perf_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/cache_perf_model_parallel.h b/common/performance_model/cache_perf_model_parallel.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/cache_perf_model_sequential.h b/common/performance_model/cache_perf_model_sequential.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/contention_model.cc b/common/performance_model/contention_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/contention_model.h b/common/performance_model/contention_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_directory_perf_model.h b/common/performance_model/dram_directory_perf_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_directory_perf_model_base.cc b/common/performance_model/dram_directory_perf_model_base.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_directory_perf_model_base.h b/common/performance_model/dram_directory_perf_model_base.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_perf_model.cc b/common/performance_model/dram_perf_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_perf_model.h b/common/performance_model/dram_perf_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_perf_model_constant.cc b/common/performance_model/dram_perf_model_constant.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_perf_model_constant.h b/common/performance_model/dram_perf_model_constant.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_perf_model_normal.cc b/common/performance_model/dram_perf_model_normal.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_perf_model_normal.h b/common/performance_model/dram_perf_model_normal.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_perf_model_readwrite.cc b/common/performance_model/dram_perf_model_readwrite.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dram_perf_model_readwrite.h b/common/performance_model/dram_perf_model_readwrite.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dynamic_instruction.cc b/common/performance_model/dynamic_instruction.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/dynamic_instruction.h b/common/performance_model/dynamic_instruction.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/fastforward_performance_model.cc b/common/performance_model/fastforward_performance_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/fastforward_performance_model.h b/common/performance_model/fastforward_performance_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/hit_where.cc b/common/performance_model/hit_where.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/hit_where.h b/common/performance_model/hit_where.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction.cc b/common/performance_model/instruction.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction.h b/common/performance_model/instruction.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction_tracers/instruction_tracer.cc b/common/performance_model/instruction_tracers/instruction_tracer.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction_tracers/instruction_tracer.h b/common/performance_model/instruction_tracers/instruction_tracer.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction_tracers/instruction_tracer_fpstats.cc b/common/performance_model/instruction_tracers/instruction_tracer_fpstats.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction_tracers/instruction_tracer_fpstats.h b/common/performance_model/instruction_tracers/instruction_tracer_fpstats.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction_tracers/instruction_tracer_print.cc b/common/performance_model/instruction_tracers/instruction_tracer_print.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction_tracers/instruction_tracer_print.h b/common/performance_model/instruction_tracers/instruction_tracer_print.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction_tracers/loop_profiler.cc b/common/performance_model/instruction_tracers/loop_profiler.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction_tracers/loop_profiler.h b/common/performance_model/instruction_tracers/loop_profiler.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction_tracers/loop_tracer.cc b/common/performance_model/instruction_tracers/loop_tracer.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/instruction_tracers/loop_tracer.h b/common/performance_model/instruction_tracers/loop_tracer.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/mmu_perf_model.h b/common/performance_model/mmu_perf_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/mmu_perf_model_base.cc b/common/performance_model/mmu_perf_model_base.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/mmu_perf_model_base.h b/common/performance_model/mmu_perf_model_base.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/operand.h b/common/performance_model/operand.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_model.cc b/common/performance_model/performance_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_model.h b/common/performance_model/performance_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/core_model.cc b/common/performance_model/performance_models/core_model/core_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/core_model.h b/common/performance_model/performance_models/core_model/core_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/core_model_boom_v1.cc b/common/performance_model/performance_models/core_model/core_model_boom_v1.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/core_model_boom_v1.h b/common/performance_model/performance_models/core_model/core_model_boom_v1.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/core_model_cortex_a53.cc b/common/performance_model/performance_models/core_model/core_model_cortex_a53.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/core_model_cortex_a53.h b/common/performance_model/performance_models/core_model/core_model_cortex_a53.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/core_model_cortex_a72.cc b/common/performance_model/performance_models/core_model/core_model_cortex_a72.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/core_model_cortex_a72.h b/common/performance_model/performance_models/core_model/core_model_cortex_a72.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/core_model_nehalem.cc b/common/performance_model/performance_models/core_model/core_model_nehalem.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/core_model_nehalem.h b/common/performance_model/performance_models/core_model/core_model_nehalem.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/dynamic_micro_op_boom_v1.cc b/common/performance_model/performance_models/core_model/dynamic_micro_op_boom_v1.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/dynamic_micro_op_boom_v1.h b/common/performance_model/performance_models/core_model/dynamic_micro_op_boom_v1.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/dynamic_micro_op_cortex_a53.cc b/common/performance_model/performance_models/core_model/dynamic_micro_op_cortex_a53.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/dynamic_micro_op_cortex_a53.h b/common/performance_model/performance_models/core_model/dynamic_micro_op_cortex_a53.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/dynamic_micro_op_cortex_a72.cc b/common/performance_model/performance_models/core_model/dynamic_micro_op_cortex_a72.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/dynamic_micro_op_cortex_a72.h b/common/performance_model/performance_models/core_model/dynamic_micro_op_cortex_a72.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/dynamic_micro_op_nehalem.cc b/common/performance_model/performance_models/core_model/dynamic_micro_op_nehalem.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/dynamic_micro_op_nehalem.h b/common/performance_model/performance_models/core_model/dynamic_micro_op_nehalem.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/core_model/riscv_meta.h b/common/performance_model/performance_models/core_model/riscv_meta.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model.cc b/common/performance_model/performance_models/interval_performance_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model.h b/common/performance_model/performance_models/interval_performance_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_contention.h b/common/performance_model/performance_models/interval_performance_model/interval_contention.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_contention_boom_v1.cc b/common/performance_model/performance_models/interval_performance_model/interval_contention_boom_v1.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_contention_boom_v1.h b/common/performance_model/performance_models/interval_performance_model/interval_contention_boom_v1.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_contention_cortex_a53.cc b/common/performance_model/performance_models/interval_performance_model/interval_contention_cortex_a53.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_contention_cortex_a53.h b/common/performance_model/performance_models/interval_performance_model/interval_contention_cortex_a53.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_contention_cortex_a72.cc b/common/performance_model/performance_models/interval_performance_model/interval_contention_cortex_a72.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_contention_cortex_a72.h b/common/performance_model/performance_models/interval_performance_model/interval_contention_cortex_a72.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_contention_nehalem.cc b/common/performance_model/performance_models/interval_performance_model/interval_contention_nehalem.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_contention_nehalem.h b/common/performance_model/performance_models/interval_performance_model/interval_contention_nehalem.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_timer.cc b/common/performance_model/performance_models/interval_performance_model/interval_timer.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/interval_timer.h b/common/performance_model/performance_models/interval_performance_model/interval_timer.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/tools.h b/common/performance_model/performance_models/interval_performance_model/tools.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/windows.cc b/common/performance_model/performance_models/interval_performance_model/windows.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/interval_performance_model/windows.h b/common/performance_model/performance_models/interval_performance_model/windows.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/dynamic_micro_op.cc b/common/performance_model/performance_models/micro_op/dynamic_micro_op.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/dynamic_micro_op.h b/common/performance_model/performance_models/micro_op/dynamic_micro_op.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/instruction_decoder.cc b/common/performance_model/performance_models/micro_op/instruction_decoder.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/instruction_decoder.h b/common/performance_model/performance_models/micro_op/instruction_decoder.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/instruction_decoder_wlib.cc b/common/performance_model/performance_models/micro_op/instruction_decoder_wlib.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/instruction_decoder_wlib.h b/common/performance_model/performance_models/micro_op/instruction_decoder_wlib.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/memory_access.h b/common/performance_model/performance_models/micro_op/memory_access.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/memory_dependencies.cc b/common/performance_model/performance_models/micro_op/memory_dependencies.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/memory_dependencies.h b/common/performance_model/performance_models/micro_op/memory_dependencies.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/micro_op.cc b/common/performance_model/performance_models/micro_op/micro_op.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/micro_op.h b/common/performance_model/performance_models/micro_op/micro_op.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/register_dependencies.cc b/common/performance_model/performance_models/micro_op/register_dependencies.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op/register_dependencies.h b/common/performance_model/performance_models/micro_op/register_dependencies.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op_performance_model.cc b/common/performance_model/performance_models/micro_op_performance_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/micro_op_performance_model.h b/common/performance_model/performance_models/micro_op_performance_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/oneipc_performance_model.cc b/common/performance_model/performance_models/oneipc_performance_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/oneipc_performance_model.h b/common/performance_model/performance_models/oneipc_performance_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model.cc b/common/performance_model/performance_models/rob_performance_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model.h b/common/performance_model/performance_models/rob_performance_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_contention.h b/common/performance_model/performance_models/rob_performance_model/rob_contention.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_contention_boom_v1.cc b/common/performance_model/performance_models/rob_performance_model/rob_contention_boom_v1.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_contention_boom_v1.h b/common/performance_model/performance_models/rob_performance_model/rob_contention_boom_v1.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_contention_cortex_a53.cc b/common/performance_model/performance_models/rob_performance_model/rob_contention_cortex_a53.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_contention_cortex_a53.h b/common/performance_model/performance_models/rob_performance_model/rob_contention_cortex_a53.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_contention_cortex_a72.cc b/common/performance_model/performance_models/rob_performance_model/rob_contention_cortex_a72.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_contention_cortex_a72.h b/common/performance_model/performance_models/rob_performance_model/rob_contention_cortex_a72.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_contention_nehalem.cc b/common/performance_model/performance_models/rob_performance_model/rob_contention_nehalem.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_contention_nehalem.h b/common/performance_model/performance_models/rob_performance_model/rob_contention_nehalem.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_smt_timer.cc b/common/performance_model/performance_models/rob_performance_model/rob_smt_timer.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_smt_timer.h b/common/performance_model/performance_models/rob_performance_model/rob_smt_timer.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_timer.cc b/common/performance_model/performance_models/rob_performance_model/rob_timer.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/rob_timer.h b/common/performance_model/performance_models/rob_performance_model/rob_timer.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/smt_timer.cc b/common/performance_model/performance_models/rob_performance_model/smt_timer.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_performance_model/smt_timer.h b/common/performance_model/performance_models/rob_performance_model/smt_timer.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_smt_performance_model.cc b/common/performance_model/performance_models/rob_smt_performance_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/performance_models/rob_smt_performance_model.h b/common/performance_model/performance_models/rob_smt_performance_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/queue_model.cc b/common/performance_model/queue_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/queue_model.h b/common/performance_model/queue_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/queue_model_basic.cc b/common/performance_model/queue_model_basic.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/queue_model_basic.h b/common/performance_model/queue_model_basic.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/queue_model_contention.cc b/common/performance_model/queue_model_contention.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/queue_model_contention.h b/common/performance_model/queue_model_contention.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/queue_model_history_list.cc b/common/performance_model/queue_model_history_list.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/queue_model_history_list.h b/common/performance_model/queue_model_history_list.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/queue_model_windowed_mg1.cc b/common/performance_model/queue_model_windowed_mg1.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/queue_model_windowed_mg1.h b/common/performance_model/queue_model_windowed_mg1.h
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/shmem_perf_model.cc b/common/performance_model/shmem_perf_model.cc
+old mode 100644
+new mode 100755
+diff --git a/common/performance_model/shmem_perf_model.h b/common/performance_model/shmem_perf_model.h
+old mode 100644
+new mode 100755
+diff --git a/common/sampling/instr_count_sampling.h b/common/sampling/instr_count_sampling.h
+old mode 100644
+new mode 100755
+diff --git a/common/sampling/periodic_sampling.cc b/common/sampling/periodic_sampling.cc
+old mode 100644
+new mode 100755
+diff --git a/common/sampling/periodic_sampling.h b/common/sampling/periodic_sampling.h
+old mode 100644
+new mode 100755
+diff --git a/common/sampling/sampling_algorithm.cc b/common/sampling/sampling_algorithm.cc
+old mode 100644
+new mode 100755
+diff --git a/common/sampling/sampling_algorithm.h b/common/sampling/sampling_algorithm.h
+old mode 100644
+new mode 100755
+diff --git a/common/sampling/sampling_manager.cc b/common/sampling/sampling_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/sampling/sampling_manager.h b/common/sampling/sampling_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/sampling/sampling_provider.cc b/common/sampling/sampling_provider.cc
+old mode 100644
+new mode 100755
+diff --git a/common/sampling/sampling_provider.h b/common/sampling/sampling_provider.h
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler.cc b/common/scheduler/scheduler.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler.h b/common/scheduler/scheduler.h
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_big_small.cc b/common/scheduler/scheduler_big_small.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_big_small.h b/common/scheduler/scheduler_big_small.h
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_dynamic.cc b/common/scheduler/scheduler_dynamic.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_dynamic.h b/common/scheduler/scheduler_dynamic.h
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_pinned.cc b/common/scheduler/scheduler_pinned.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_pinned.h b/common/scheduler/scheduler_pinned.h
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_pinned_base.cc b/common/scheduler/scheduler_pinned_base.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_pinned_base.h b/common/scheduler/scheduler_pinned_base.h
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_roaming.cc b/common/scheduler/scheduler_roaming.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_roaming.h b/common/scheduler/scheduler_roaming.h
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_sequential.cc b/common/scheduler/scheduler_sequential.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_sequential.h b/common/scheduler/scheduler_sequential.h
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_static.cc b/common/scheduler/scheduler_static.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scheduler/scheduler_static.h b/common/scheduler/scheduler_static.h
+old mode 100644
+new mode 100755
+diff --git a/common/scripting/hooks_py.cc b/common/scripting/hooks_py.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scripting/hooks_py.h b/common/scripting/hooks_py.h
+old mode 100644
+new mode 100755
+diff --git a/common/scripting/py_bbv.cc b/common/scripting/py_bbv.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scripting/py_config.cc b/common/scripting/py_config.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scripting/py_control.cc b/common/scripting/py_control.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scripting/py_dvfs.cc b/common/scripting/py_dvfs.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scripting/py_hooks.cc b/common/scripting/py_hooks.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scripting/py_mem.cc b/common/scripting/py_mem.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scripting/py_stats.cc b/common/scripting/py_stats.cc
+old mode 100644
+new mode 100755
+diff --git a/common/scripting/py_thread.cc b/common/scripting/py_thread.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/.thread_manager.cc.swo b/common/system/.thread_manager.cc.swo
+old mode 100644
+new mode 100755
+diff --git a/common/system/barrier_sync_client.cc b/common/system/barrier_sync_client.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/barrier_sync_client.h b/common/system/barrier_sync_client.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/barrier_sync_server.cc b/common/system/barrier_sync_server.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/barrier_sync_server.h b/common/system/barrier_sync_server.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/cache_efficiency_tracker.h b/common/system/cache_efficiency_tracker.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/clock_skew_minimization_object.cc b/common/system/clock_skew_minimization_object.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/clock_skew_minimization_object.h b/common/system/clock_skew_minimization_object.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/core_manager.cc b/common/system/core_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/core_manager.h b/common/system/core_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/core_thread.cc b/common/system/core_thread.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/core_thread.h b/common/system/core_thread.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/dvfs_manager.cc b/common/system/dvfs_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/dvfs_manager.h b/common/system/dvfs_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/fastforward_performance_manager.cc b/common/system/fastforward_performance_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/fastforward_performance_manager.h b/common/system/fastforward_performance_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/hooks_manager.cc b/common/system/hooks_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/hooks_manager.h b/common/system/hooks_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/hooks_manager_init.cc b/common/system/hooks_manager_init.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/inst_mode.cc b/common/system/inst_mode.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/inst_mode.h b/common/system/inst_mode.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/magic_client.cc b/common/system/magic_client.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/magic_client.h b/common/system/magic_client.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/magic_server.cc b/common/system/magic_server.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/magic_server.h b/common/system/magic_server.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/memory_tracker.cc b/common/system/memory_tracker.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/memory_tracker.h b/common/system/memory_tracker.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/pthread_emu.cc b/common/system/pthread_emu.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/pthread_emu.h b/common/system/pthread_emu.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/routine_tracer.cc b/common/system/routine_tracer.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/routine_tracer.h b/common/system/routine_tracer.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/routine_tracer_funcstats.cc b/common/system/routine_tracer_funcstats.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/routine_tracer_funcstats.h b/common/system/routine_tracer_funcstats.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/routine_tracer_ondemand.cc b/common/system/routine_tracer_ondemand.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/routine_tracer_ondemand.h b/common/system/routine_tracer_ondemand.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/routine_tracer_print.cc b/common/system/routine_tracer_print.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/routine_tracer_print.h b/common/system/routine_tracer_print.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/sim_thread.cc b/common/system/sim_thread.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/sim_thread.h b/common/system/sim_thread.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/sim_thread_manager.cc b/common/system/sim_thread_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/sim_thread_manager.h b/common/system/sim_thread_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/simulator.cc b/common/system/simulator.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/simulator.h b/common/system/simulator.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/sync_client.cc b/common/system/sync_client.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/sync_client.h b/common/system/sync_client.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/sync_server.cc b/common/system/sync_server.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/sync_server.h b/common/system/sync_server.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/syscall_server.cc b/common/system/syscall_server.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/syscall_server.h b/common/system/syscall_server.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/thread_manager.cc b/common/system/thread_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/thread_manager.h b/common/system/thread_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/system/thread_stats_manager.cc b/common/system/thread_stats_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/system/thread_stats_manager.h b/common/system/thread_stats_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/trace_frontend/trace_manager.cc b/common/trace_frontend/trace_manager.cc
+old mode 100644
+new mode 100755
+diff --git a/common/trace_frontend/trace_manager.h b/common/trace_frontend/trace_manager.h
+old mode 100644
+new mode 100755
+diff --git a/common/trace_frontend/trace_thread.cc b/common/trace_frontend/trace_thread.cc
+old mode 100644
+new mode 100755
+diff --git a/common/trace_frontend/trace_thread.h b/common/trace_frontend/trace_thread.h
+old mode 100644
+new mode 100755
+diff --git a/common/transport/smtransport.cc b/common/transport/smtransport.cc
+old mode 100644
+new mode 100755
+diff --git a/common/transport/smtransport.h b/common/transport/smtransport.h
+old mode 100644
+new mode 100755
+diff --git a/common/transport/transport.cc b/common/transport/transport.cc
+old mode 100644
+new mode 100755
+diff --git a/common/transport/transport.h b/common/transport/transport.h
+old mode 100644
+new mode 100755
+diff --git a/common/user/sync_api.cc b/common/user/sync_api.cc
+old mode 100644
+new mode 100755
+diff --git a/common/user/sync_api.h b/common/user/sync_api.h
+old mode 100644
+new mode 100755
+diff --git a/config/atd.cfg b/config/atd.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/base.cfg b/config/base.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/beckton.cfg b/config/beckton.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/cacheonly.cfg b/config/cacheonly.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/cortex-a53.cfg b/config/cortex-a53.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/cortex-a72.cfg b/config/cortex-a72.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/default.cfg b/config/default.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/dram-cache.cfg b/config/dram-cache.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/dunnington.cfg b/config/dunnington.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/dunnington16.cfg b/config/dunnington16.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/gainestown.cfg b/config/gainestown.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/interval.cfg b/config/interval.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/jikes.cfg b/config/jikes.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/kingscross.cfg b/config/kingscross.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/llc-qbs.cfg b/config/llc-qbs.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/nehalem-lite.cfg b/config/nehalem-lite.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/nehalem.cfg b/config/nehalem.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/noc.cfg b/config/noc.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/nuca-cache.cfg b/config/nuca-cache.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/oneipc.cfg b/config/oneipc.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/prefetcher.cfg b/config/prefetcher.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/riscv-mediumboom.cfg b/config/riscv-mediumboom.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/riscv.cfg b/config/riscv.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/rob.cfg b/config/rob.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/sampling.cfg b/config/sampling.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/silvermont.cfg b/config/silvermont.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/smt1.cfg b/config/smt1.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/smt2.cfg b/config/smt2.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/smt4.cfg b/config/smt4.cfg
+old mode 100644
+new mode 100755
+diff --git a/config/smt8.cfg b/config/smt8.cfg
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/Makefile b/decoder_lib/Makefile
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/arm_decoder.cc b/decoder_lib/arm_decoder.cc
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/arm_decoder.h b/decoder_lib/arm_decoder.h
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/decoder.cc b/decoder_lib/decoder.cc
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/decoder.h b/decoder_lib/decoder.h
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/riscv_decoder.cc b/decoder_lib/riscv_decoder.cc
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/riscv_decoder.h b/decoder_lib/riscv_decoder.h
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/test/Makefile b/decoder_lib/test/Makefile
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/test/test_arm.cc b/decoder_lib/test/test_arm.cc
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/test/test_x86.cc b/decoder_lib/test/test_x86.cc
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/x86_decoder.cc b/decoder_lib/x86_decoder.cc
+old mode 100644
+new mode 100755
+diff --git a/decoder_lib/x86_decoder.h b/decoder_lib/x86_decoder.h
+old mode 100644
+new mode 100755
+diff --git a/docker/Dockerfile-ubuntu-16.04 b/docker/Dockerfile-ubuntu-16.04
+old mode 100644
+new mode 100755
+diff --git a/docker/Dockerfile-ubuntu-18.04 b/docker/Dockerfile-ubuntu-18.04
+old mode 100644
+new mode 100755
+diff --git a/docker/Dockerfile-ubuntu-20.04 b/docker/Dockerfile-ubuntu-20.04
+old mode 100644
+new mode 100755
+diff --git a/docker/Dockerfile-ubuntu-22.04 b/docker/Dockerfile-ubuntu-22.04
+old mode 100644
+new mode 100755
+diff --git a/docker/Makefile b/docker/Makefile
+old mode 100644
+new mode 100755
+diff --git a/frontend/Doxyfile b/frontend/Doxyfile
+old mode 100644
+new mode 100755
+diff --git a/frontend/bbv_count.cc b/frontend/bbv_count.cc
+old mode 100644
+new mode 100755
+diff --git a/frontend/bbv_count.h b/frontend/bbv_count.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/doxybs/customdoxygen.css b/frontend/doxybs/customdoxygen.css
+old mode 100644
+new mode 100755
+diff --git a/frontend/doxybs/doxy-boot.js b/frontend/doxybs/doxy-boot.js
+old mode 100644
+new mode 100755
+diff --git a/frontend/doxybs/footer.html b/frontend/doxybs/footer.html
+old mode 100644
+new mode 100755
+diff --git a/frontend/doxybs/header.html b/frontend/doxybs/header.html
+old mode 100644
+new mode 100755
+diff --git a/frontend/doxybs/main.dox b/frontend/doxybs/main.dox
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/CMakeLists.txt b/frontend/dr-frontend/CMakeLists.txt
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/README.md b/frontend/dr-frontend/README.md
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_control.h b/frontend/dr-frontend/dr_fe_control.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_control.tcc b/frontend/dr-frontend/dr_fe_control.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_copy.h b/frontend/dr-frontend/dr_fe_copy.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_copy.tcc b/frontend/dr-frontend/dr_fe_copy.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_lock.h b/frontend/dr-frontend/dr_fe_lock.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_lock.tcc b/frontend/dr-frontend/dr_fe_lock.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_macros.h b/frontend/dr-frontend/dr_fe_macros.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_options.h b/frontend/dr-frontend/dr_fe_options.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_options.tcc b/frontend/dr-frontend/dr_fe_options.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_syscall.h b/frontend/dr-frontend/dr_fe_syscall.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_syscall.tcc b/frontend/dr-frontend/dr_fe_syscall.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_threads.h b/frontend/dr-frontend/dr_fe_threads.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_fe_threads.tcc b/frontend/dr-frontend/dr_fe_threads.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_frontend.cc b/frontend/dr-frontend/dr_frontend.cc
+old mode 100644
+new mode 100755
+diff --git a/frontend/dr-frontend/dr_frontend.h b/frontend/dr-frontend/dr_frontend.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/ezOptionParser.hpp b/frontend/ezOptionParser.hpp
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend-inl.h b/frontend/frontend-inl.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend.h b/frontend/frontend.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend.tcc b/frontend/frontend.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_callbacks-inl.h b/frontend/frontend_callbacks-inl.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_callbacks.h b/frontend/frontend_callbacks.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_callbacks.tcc b/frontend/frontend_callbacks.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_control-inl.h b/frontend/frontend_control-inl.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_control.h b/frontend/frontend_control.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_control.tcc b/frontend/frontend_control.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_defs.h b/frontend/frontend_defs.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_options-inl.h b/frontend/frontend_options-inl.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_options.h b/frontend/frontend_options.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_options.tcc b/frontend/frontend_options.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_syscall-inl.h b/frontend/frontend_syscall-inl.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_syscall.h b/frontend/frontend_syscall.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_syscall.tcc b/frontend/frontend_syscall.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_threads.h b/frontend/frontend_threads.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_threads.tcc b/frontend/frontend_threads.tcc
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_utils-inl.h b/frontend/frontend_utils-inl.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/frontend_utils.h b/frontend/frontend_utils.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/pin-frontend/Makefile b/frontend/pin-frontend/Makefile
+old mode 100644
+new mode 100755
+diff --git a/frontend/pin-frontend/globals.cc b/frontend/pin-frontend/globals.cc
+old mode 100644
+new mode 100755
+diff --git a/frontend/pin-frontend/globals.h b/frontend/pin-frontend/globals.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/pin-frontend/makefile.rules b/frontend/pin-frontend/makefile.rules
+old mode 100644
+new mode 100755
+diff --git a/frontend/pin-frontend/pin_frontend.cc b/frontend/pin-frontend/pin_frontend.cc
+old mode 100644
+new mode 100755
+diff --git a/frontend/pin-frontend/sift/makefile b/frontend/pin-frontend/sift/makefile
+old mode 100644
+new mode 100755
+diff --git a/frontend/pin-frontend/upperlower.h b/frontend/pin-frontend/upperlower.h
+old mode 100644
+new mode 100755
+diff --git a/frontend/qsim-frontend/Makefile b/frontend/qsim-frontend/Makefile
+old mode 100644
+new mode 100755
+diff --git a/frontend/qsim-frontend/qsim_frontend.cc b/frontend/qsim-frontend/qsim_frontend.cc
+old mode 100644
+new mode 100755
+diff --git a/frontend/shared_ptr.h b/frontend/shared_ptr.h
+old mode 100644
+new mode 100755
+diff --git a/include/linux/perf_event_2.6.32.h b/include/linux/perf_event_2.6.32.h
+old mode 100644
+new mode 100755
+diff --git a/include/sim_api.h b/include/sim_api.h
+old mode 100644
+new mode 100755
+diff --git a/pin/Makefile b/pin/Makefile
+old mode 100644
+new mode 100755
+diff --git a/pin/codecache_trace.cc b/pin/codecache_trace.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/codecache_trace.h b/pin/codecache_trace.h
+old mode 100644
+new mode 100755
+diff --git a/pin/follow_execv/follow_execv.cc b/pin/follow_execv/follow_execv.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/inst_mode.cc b/pin/inst_mode.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/inst_mode_macros.h b/pin/inst_mode_macros.h
+old mode 100644
+new mode 100755
+diff --git a/pin/instruction_modeling.cc b/pin/instruction_modeling.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/instruction_modeling.h b/pin/instruction_modeling.h
+old mode 100644
+new mode 100755
+diff --git a/pin/lite/handle_syscalls.cc b/pin/lite/handle_syscalls.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/lite/handle_syscalls.h b/pin/lite/handle_syscalls.h
+old mode 100644
+new mode 100755
+diff --git a/pin/lite/memory_modeling.cc b/pin/lite/memory_modeling.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/lite/memory_modeling.h b/pin/lite/memory_modeling.h
+old mode 100644
+new mode 100755
+diff --git a/pin/lite/routine_replace.cc b/pin/lite/routine_replace.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/lite/routine_replace.h b/pin/lite/routine_replace.h
+old mode 100644
+new mode 100755
+diff --git a/pin/local_storage.cc b/pin/local_storage.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/local_storage.h b/pin/local_storage.h
+old mode 100644
+new mode 100755
+diff --git a/pin/pin_exceptions.cc b/pin/pin_exceptions.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/pin_exceptions.h b/pin/pin_exceptions.h
+old mode 100644
+new mode 100755
+diff --git a/pin/pin_lock.cc b/pin/pin_lock.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/pin_lock.h b/pin/pin_lock.h
+old mode 100644
+new mode 100755
+diff --git a/pin/pin_sim.cc b/pin/pin_sim.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/pin_thread.cc b/pin/pin_thread.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/pin_thread.h b/pin/pin_thread.h
+old mode 100644
+new mode 100755
+diff --git a/pin/pin_tls.cc b/pin/pin_tls.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/spin_loop_detection.cc b/pin/spin_loop_detection.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/spin_loop_detection.h b/pin/spin_loop_detection.h
+old mode 100644
+new mode 100755
+diff --git a/pin/toolreg.cc b/pin/toolreg.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/toolreg.h b/pin/toolreg.h
+old mode 100644
+new mode 100755
+diff --git a/pin/trace_rtn.cc b/pin/trace_rtn.cc
+old mode 100644
+new mode 100755
+diff --git a/pin/trace_rtn.h b/pin/trace_rtn.h
+old mode 100644
+new mode 100755
+diff --git a/scripts/appevents.py b/scripts/appevents.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/bbvtrace.py b/scripts/bbvtrace.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/bottlegraph.py b/scripts/bottlegraph.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/dvfs.py b/scripts/dvfs.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/energystats.py b/scripts/energystats.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/hpitest.py b/scripts/hpitest.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/ipcthreadtrace.py b/scripts/ipcthreadtrace.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/ipctrace.py b/scripts/ipctrace.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/lctrace.py b/scripts/lctrace.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/markers.py b/scripts/markers.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/output-as-markers.py b/scripts/output-as-markers.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/periodic-stats.py b/scripts/periodic-stats.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/periodicins-stats.py b/scripts/periodicins-stats.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/powertrace.py b/scripts/powertrace.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/progresstrace.py b/scripts/progresstrace.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/roi-icount.py b/scripts/roi-icount.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/roi-iter.py b/scripts/roi-iter.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/scheduler-locality.py b/scripts/scheduler-locality.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/sim/__init__.py b/scripts/sim/__init__.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/sim/util.py b/scripts/sim/util.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/simuserroi.py b/scripts/simuserroi.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/stattrace.py b/scripts/stattrace.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/stop-by-icount.py b/scripts/stop-by-icount.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/stop-by-time.py b/scripts/stop-by-time.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/synctrace.py b/scripts/synctrace.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/syscall_strings.py b/scripts/syscall_strings.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/syscalls.py b/scripts/syscalls.py
+old mode 100644
+new mode 100755
+diff --git a/scripts/tcp.py b/scripts/tcp.py
+old mode 100644
+new mode 100755
+diff --git a/sift/Makefile b/sift/Makefile
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/Makefile b/sift/recorder/Makefile
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/bbv_count.cc b/sift/recorder/bbv_count.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/bbv_count.h b/sift/recorder/bbv_count.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/emulation.cc b/sift/recorder/emulation.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/emulation.h b/sift/recorder/emulation.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/globals.cc b/sift/recorder/globals.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/globals.h b/sift/recorder/globals.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/icountsniper.h b/sift/recorder/icountsniper.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/makefile.pin.rules b/sift/recorder/makefile.pin.rules
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/makefile.sde.rules b/sift/recorder/makefile.sde.rules
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/papi.cc b/sift/recorder/papi.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/papi.h b/sift/recorder/papi.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/pinboost_assert.h b/sift/recorder/pinboost_assert.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/pinboost_debug.cc b/sift/recorder/pinboost_debug.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/pinboost_debug.h b/sift/recorder/pinboost_debug.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/recorder_base.cc b/sift/recorder/recorder_base.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/recorder_base.h b/sift/recorder/recorder_base.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/recorder_control.cc b/sift/recorder/recorder_control.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/recorder_control.h b/sift/recorder/recorder_control.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/sift/makefile b/sift/recorder/sift/makefile
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/sift/makefile.pin b/sift/recorder/sift/makefile.pin
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/sift/makefile.rules b/sift/recorder/sift/makefile.rules
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/sift_recorder.cc b/sift/recorder/sift_recorder.cc
+old mode 100644
+new mode 100755
 diff --git a/sift/recorder/syscall_modeling.cc b/sift/recorder/syscall_modeling.cc
-index 4944127..e69e73c 100644
+old mode 100644
+new mode 100755
+index 4944127..e69e73c
 --- a/sift/recorder/syscall_modeling.cc
 +++ b/sift/recorder/syscall_modeling.cc
 @@ -7,6 +7,8 @@
@@ -324,3 +2319,570 @@ index 4944127..e69e73c 100644
        }
     }
  }
+diff --git a/sift/recorder/syscall_modeling.h b/sift/recorder/syscall_modeling.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/threads.cc b/sift/recorder/threads.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/threads.h b/sift/recorder/threads.h
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/trace_rtn.cc b/sift/recorder/trace_rtn.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/recorder/trace_rtn.h b/sift/recorder/trace_rtn.h
+old mode 100644
+new mode 100755
+diff --git a/sift/sift.h b/sift/sift.h
+old mode 100644
+new mode 100755
+diff --git a/sift/sift_assert.h b/sift/sift_assert.h
+old mode 100644
+new mode 100755
+diff --git a/sift/sift_format.h b/sift/sift_format.h
+old mode 100644
+new mode 100755
+diff --git a/sift/sift_reader.cc b/sift/sift_reader.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/sift_reader.h b/sift/sift_reader.h
+old mode 100644
+new mode 100755
+diff --git a/sift/sift_utils.cc b/sift/sift_utils.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/sift_utils.h b/sift/sift_utils.h
+old mode 100644
+new mode 100755
+diff --git a/sift/sift_writer.cc b/sift/sift_writer.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/sift_writer.h b/sift/sift_writer.h
+old mode 100644
+new mode 100755
+diff --git a/sift/siftdump.cc b/sift/siftdump.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/zfstream.cc b/sift/zfstream.cc
+old mode 100644
+new mode 100755
+diff --git a/sift/zfstream.h b/sift/zfstream.h
+old mode 100644
+new mode 100755
+diff --git a/standalone/Makefile b/standalone/Makefile
+old mode 100644
+new mode 100755
+diff --git a/standalone/exceptions.cc b/standalone/exceptions.cc
+old mode 100644
+new mode 100755
+diff --git a/standalone/exceptions.h b/standalone/exceptions.h
+old mode 100644
+new mode 100755
+diff --git a/standalone/standalone.cc b/standalone/standalone.cc
+old mode 100644
+new mode 100755
+diff --git a/test/api/Makefile b/test/api/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/api/api.c b/test/api/api.c
+old mode 100644
+new mode 100755
+diff --git a/test/aso/Makefile b/test/aso/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/demo-scheduling/Makefile b/test/demo-scheduling/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/demo-scheduling/big.cfg b/test/demo-scheduling/big.cfg
+old mode 100644
+new mode 100755
+diff --git a/test/demo-scheduling/demo.py b/test/demo-scheduling/demo.py
+old mode 100644
+new mode 100755
+diff --git a/test/demo-scheduling/small.cfg b/test/demo-scheduling/small.cfg
+old mode 100644
+new mode 100755
+diff --git a/test/dvfs/Makefile b/test/dvfs/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/dvfs/dvfs.c b/test/dvfs/dvfs.c
+old mode 100644
+new mode 100755
+diff --git a/test/fft-dvfs/Makefile b/test/fft-dvfs/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/fft-hetero-cfg/Makefile b/test/fft-hetero-cfg/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/fft-hetero-cfg/big.cfg b/test/fft-hetero-cfg/big.cfg
+old mode 100644
+new mode 100755
+diff --git a/test/fft-hetero-cfg/small.cfg b/test/fft-hetero-cfg/small.cfg
+old mode 100644
+new mode 100755
+diff --git a/test/fft-hetero-cfg/tiny.cfg b/test/fft-hetero-cfg/tiny.cfg
+old mode 100644
+new mode 100755
+diff --git a/test/fft-hetero/Makefile b/test/fft-hetero/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/fft-hetero/hetero.cfg b/test/fft-hetero/hetero.cfg
+old mode 100644
+new mode 100755
+diff --git a/test/fft-marker/Makefile b/test/fft-marker/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/fft/Makefile b/test/fft/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/fft/fft.c b/test/fft/fft.c
+old mode 100644
+new mode 100755
+diff --git a/test/fork/Makefile b/test/fork/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/fork/fork.c b/test/fork/fork.c
+old mode 100644
+new mode 100755
+diff --git a/test/mpi-omp/Makefile b/test/mpi-omp/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/mpi-omp/hybrid.c b/test/mpi-omp/hybrid.c
+old mode 100644
+new mode 100755
+diff --git a/test/mpi/Makefile b/test/mpi/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/mpi/pi_mpi.c b/test/mpi/pi_mpi.c
+old mode 100644
+new mode 100755
+diff --git a/test/pinplay/Makefile b/test/pinplay/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/shared/Makefile.shared b/test/shared/Makefile.shared
+old mode 100644
+new mode 100755
+diff --git a/test/signal/Makefile b/test/signal/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/signal/signal.c b/test/signal/signal.c
+old mode 100644
+new mode 100755
+diff --git a/test/smc/Makefile b/test/smc/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/smc/smc.c b/test/smc/smc.c
+old mode 100644
+new mode 100755
+diff --git a/test/sniper-in-sniper/Makefile b/test/sniper-in-sniper/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/spinloop/Makefile b/test/spinloop/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/spinloop/spinloop.c b/test/spinloop/spinloop.c
+old mode 100644
+new mode 100755
+diff --git a/test/true/Makefile b/test/true/Makefile
+old mode 100644
+new mode 100755
+diff --git a/test/true/true.cc b/test/true/true.cc
+old mode 100644
+new mode 100755
+diff --git a/tools/Makefile b/tools/Makefile
+old mode 100644
+new mode 100755
+diff --git a/tools/cpistack-collect/jquery.js b/tools/cpistack-collect/jquery.js
+old mode 100644
+new mode 100755
+diff --git a/tools/cpistack_data.py b/tools/cpistack_data.py
+old mode 100644
+new mode 100755
+diff --git a/tools/cpistack_items.py b/tools/cpistack_items.py
+old mode 100644
+new mode 100755
+diff --git a/tools/cpistack_results.py b/tools/cpistack_results.py
+old mode 100644
+new mode 100755
+diff --git a/tools/debugpin.py b/tools/debugpin.py
+old mode 100644
+new mode 100755
+diff --git a/tools/env_setup.sh b/tools/env_setup.sh
+old mode 100644
+new mode 100755
+diff --git a/tools/graphite_lib.py b/tools/graphite_lib.py
+old mode 100644
+new mode 100755
+diff --git a/tools/gridcolors.py b/tools/gridcolors.py
+old mode 100644
+new mode 100755
+diff --git a/tools/iris4.csv b/tools/iris4.csv
+old mode 100644
+new mode 100755
+diff --git a/tools/localjson.py b/tools/localjson.py
+old mode 100644
+new mode 100755
+diff --git a/tools/run_sniper.py b/tools/run_sniper.py
+old mode 100644
+new mode 100755
+diff --git a/tools/sniper_config.py b/tools/sniper_config.py
+old mode 100644
+new mode 100755
+diff --git a/tools/sniper_lib.py b/tools/sniper_lib.py
+old mode 100644
+new mode 100755
+diff --git a/tools/sniper_stats.py b/tools/sniper_stats.py
+old mode 100644
+new mode 100755
+diff --git a/tools/sniper_stats_compat.py b/tools/sniper_stats_compat.py
+old mode 100644
+new mode 100755
+diff --git a/tools/sniper_stats_db.py b/tools/sniper_stats_db.py
+old mode 100644
+new mode 100755
+diff --git a/tools/sniper_stats_jobid.py b/tools/sniper_stats_jobid.py
+old mode 100644
+new mode 100755
+diff --git a/tools/sniper_stats_sqlite.py b/tools/sniper_stats_sqlite.py
+old mode 100644
+new mode 100755
+diff --git a/tools/timeout.py b/tools/timeout.py
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/asohelper.py b/tools/viz/asohelper.py
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/asomodules.py b/tools/viz/asomodules.py
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/css/background1.gif b/tools/viz/css/background1.gif
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/css/background2.gif b/tools/viz/css/background2.gif
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/css/jquery.powertip.css b/tools/viz/css/jquery.powertip.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/css/jquery.svg.css b/tools/viz/css/jquery.svg.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/css/visualization.css b/tools/viz/css/visualization.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/images/bullet-left.png b/tools/viz/flot/images/bullet-left.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/images/bullet-right.png b/tools/viz/flot/images/bullet-right.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/images/document.png b/tools/viz/flot/images/document.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/images/info.png b/tools/viz/flot/images/info.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/images/instrvstime.png b/tools/viz/flot/images/instrvstime.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/images/left_forward.png b/tools/viz/flot/images/left_forward.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/images/optimization.png b/tools/viz/flot/images/optimization.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/images/right_forward.png b/tools/viz/flot/images/right_forward.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/images/roofline.png b/tools/viz/flot/images/roofline.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/images/zoomout-16.png b/tools/viz/flot/images/zoomout-16.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/jquery-ui-1.10.2.custom.css b/tools/viz/flot/jquery-ui-1.10.2.custom.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/jquery-ui-1.10.2.custom.min.js b/tools/viz/flot/jquery-ui-1.10.2.custom.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/jquery.flot.axislabels.js b/tools/viz/flot/jquery.flot.axislabels.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/jquery.flot.js b/tools/viz/flot/jquery.flot.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/jquery.flot.stack.js b/tools/viz/flot/jquery.flot.stack.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/jquery.js b/tools/viz/flot/jquery.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/flot/roofline.css b/tools/viz/flot/roofline.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/functionparser.py b/tools/viz/functionparser.py
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/images/sniperlogo.png b/tools/viz/images/sniperlogo.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/index.html b/tools/viz/index.html
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/level1.py b/tools/viz/level1.py
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/functionbased/Doxyfile-template b/tools/viz/levels/functionbased/Doxyfile-template
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/functionbased/functionbased.html b/tools/viz/levels/functionbased/functionbased.html
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/functionbased/functioninfo.js b/tools/viz/levels/functionbased/functioninfo.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/functionbased/optimizations.js b/tools/viz/levels/functionbased/optimizations.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level2/css/jquery-ui.css b/tools/viz/levels/level2/css/jquery-ui.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level2/cyclestacks.html b/tools/viz/levels/level2/cyclestacks.html
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level2/javascript/jquery-ui.min.js b/tools/viz/levels/level2/javascript/jquery-ui.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level2/javascript/jquery.min.js b/tools/viz/levels/level2/javascript/jquery.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level2/mcpatviz.html b/tools/viz/levels/level2/mcpatviz.html
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level3/javascript/ColourGradient.js b/tools/viz/levels/level3/javascript/ColourGradient.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level3/javascript/SurfacePlot.js b/tools/viz/levels/level3/javascript/SurfacePlot.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level3/javascript/excanvas.min.js b/tools/viz/levels/level3/javascript/excanvas.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level3/javascript/glMatrix-0.9.5.min.js b/tools/viz/levels/level3/javascript/glMatrix-0.9.5.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level3/javascript/jquery.min.js b/tools/viz/levels/level3/javascript/jquery.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level3/javascript/webgl-utils.js b/tools/viz/levels/level3/javascript/webgl-utils.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/level3/level3.html b/tools/viz/levels/level3/level3.html
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/profile/profile.html b/tools/viz/levels/profile/profile.html
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/levels/topology/topology.html b/tools/viz/levels/topology/topology.html
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/profile.py b/tools/viz/profile.py
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/js/extensions.js b/tools/viz/rickshaw/js/extensions.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/css/detail.css b/tools/viz/rickshaw/src/css/detail.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/css/detail2.css b/tools/viz/rickshaw/src/css/detail2.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/css/extensions.css b/tools/viz/rickshaw/src/css/extensions.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/css/graph.css b/tools/viz/rickshaw/src/css/graph.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/css/graph2.css b/tools/viz/rickshaw/src/css/graph2.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/css/legend.css b/tools/viz/rickshaw/src/css/legend.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/css/lines.css b/tools/viz/rickshaw/src/css/lines.css
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/interp_cardinal.png b/tools/viz/rickshaw/src/images/interp_cardinal.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/interp_linear.png b/tools/viz/rickshaw/src/images/interp_linear.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/interp_step.png b/tools/viz/rickshaw/src/images/interp_step.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/offset_pct.png b/tools/viz/rickshaw/src/images/offset_pct.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/offset_stack.png b/tools/viz/rickshaw/src/images/offset_stack.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/offset_stream.png b/tools/viz/rickshaw/src/images/offset_stream.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/offset_value.png b/tools/viz/rickshaw/src/images/offset_value.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/om_bar.png b/tools/viz/rickshaw/src/images/om_bar.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/om_curves.png b/tools/viz/rickshaw/src/images/om_curves.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/om_lines.png b/tools/viz/rickshaw/src/images/om_lines.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/om_percent.png b/tools/viz/rickshaw/src/images/om_percent.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/om_scatter.png b/tools/viz/rickshaw/src/images/om_scatter.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/om_stack.png b/tools/viz/rickshaw/src/images/om_stack.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/om_step.png b/tools/viz/rickshaw/src/images/om_step.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/images/om_stream.png b/tools/viz/rickshaw/src/images/om_stream.png
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Class.js b/tools/viz/rickshaw/src/js/Rickshaw.Class.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Color.Palette.js b/tools/viz/rickshaw/src/js/Rickshaw.Color.Palette.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Compat.ClassList.js b/tools/viz/rickshaw/src/js/Rickshaw.Compat.ClassList.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Fixtures.Color.js b/tools/viz/rickshaw/src/js/Rickshaw.Fixtures.Color.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Fixtures.Number.js b/tools/viz/rickshaw/src/js/Rickshaw.Fixtures.Number.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Fixtures.RandomData.js b/tools/viz/rickshaw/src/js/Rickshaw.Fixtures.RandomData.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Fixtures.Time.js b/tools/viz/rickshaw/src/js/Rickshaw.Fixtures.Time.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Ajax.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Ajax.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Annotate.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Annotate.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Axis.Time.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Axis.Time.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Axis.X.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Axis.X.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Axis.Y.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Axis.Y.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Behavior.Series.Highlight.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Behavior.Series.Highlight.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Behavior.Series.Order.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Behavior.Series.Order.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Behavior.Series.Toggle.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Behavior.Series.Toggle.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.HoverDetail.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.HoverDetail.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.JSONP.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.JSONP.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Legend.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Legend.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.RangeSlider.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.RangeSlider.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.Area.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.Area.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.Bar.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.Bar.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.Line.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.Line.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.ScatterPlot.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.ScatterPlot.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.Stack.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.Stack.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Renderer.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Smoother.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Smoother.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.Unstacker.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.Unstacker.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Graph.js b/tools/viz/rickshaw/src/js/Rickshaw.Graph.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Series.FixedDuration.js b/tools/viz/rickshaw/src/js/Rickshaw.Series.FixedDuration.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.Series.js b/tools/viz/rickshaw/src/js/Rickshaw.Series.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/src/js/Rickshaw.js b/tools/viz/rickshaw/src/js/Rickshaw.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/vendor/d3.layout.min.js b/tools/viz/rickshaw/vendor/d3.layout.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/vendor/d3.layout.min2.js b/tools/viz/rickshaw/vendor/d3.layout.min2.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/vendor/d3.min.js b/tools/viz/rickshaw/vendor/d3.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/rickshaw/vendor/d3.min2.js b/tools/viz/rickshaw/vendor/d3.min2.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/scripts/SVGPan.js b/tools/viz/scripts/SVGPan.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/scripts/header.js b/tools/viz/scripts/header.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/scripts/jquery-1.8.3.min.js b/tools/viz/scripts/jquery-1.8.3.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/scripts/jquery.powertip-1.1.0.min.js b/tools/viz/scripts/jquery.powertip-1.1.0.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/scripts/jquery.sparkline.min.js b/tools/viz/scripts/jquery.sparkline.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/scripts/jquery.svg.min.js b/tools/viz/scripts/jquery.svg.min.js
+old mode 100644
+new mode 100755
+diff --git a/tools/viz/topology.py b/tools/viz/topology.py
+old mode 100644
+new mode 100755

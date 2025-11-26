@@ -1,0 +1,20 @@
+  - cmd: "$SIMULATOR_ROOT/gem5/build/X86/gem5.opt"
+    args:
+      [
+        "$SIMULATOR_ROOT/gem5/configs/deprecated/example/se.py",
+        "--cmd=$BENCHMARK_ROOT/bin/mlp_cpu",
+        "--options=0 0",
+        "--cpu-type=AtomicSimpleCPU",
+        "--num-cpus=4",
+        "--mem-size=8GB"
+      ]
+    log: "gem5.0.0.log"
+    is_to_stdout: false
+    clock_rate: 1
+
+
+  - cmd: "$SIMULATOR_ROOT/snipersim/run-sniper"
+    args: ["--", "$BENCHMARK_ROOT/bin/mlp_cpu", "0", "0"]
+    log: "sniper.0.0.log"
+    is_to_stdout: false
+    clock_rate: 1

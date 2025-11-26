@@ -45,6 +45,17 @@ void delfile(char* fileName) {
     }
 }
 
+// 向所有 GPU 进程发送终止信号，避免 GPU 端无限等待
+void stopGpuWorkers() {
+    int64_t stop_flag[2] = {0, 0};
+    for (int x = 0; x <= 1; ++x) {
+        for (int y = 1; y <= 4; ++y) {
+            InterChiplet::sendMessage(x, y, srcX, srcY, stop_flag, 2 * sizeof(int64_t));
+            InterChiplet::sendMessage(x, y, srcX, srcY, stop_flag, 2 * sizeof(int64_t));
+        }
+    }
+}
+
 void BPNeuralNetwork(int Input_size, std::vector<int> Hidden_size, int Output_size, int SrcX,
                      int SrcY) {
     srcX = SrcX;
@@ -168,7 +179,7 @@ void GpuMultiply(double* mat1, double* mat2, int fst_Row, int fst_Col, int sec_R
     delete[] Mat2_size;
     delete[] mat1;
     delete[] mat2;
-    Mat1 = NULL;
+    Mat1 = NULL; 
     Mat2 = NULL;
     Mat1_size = NULL;
     Mat2_size = NULL;
@@ -177,7 +188,8 @@ void ToGPU(double* mat1, double* mat2, int fst_Row, int fst_Col, int sec_Row, in
            std::vector<std::vector<double>>& Res, int gpu_num) {
     std::vector<std::vector<std::vector<double>>> dev1, dev2;
     std::vector<std::vector<double>> dev1_, dev2_;
-    int Col_per_GPU = fst_Col / 3;
+//    int Col_per_GPU = fst_Col / 3;
+    int Col_per_GPU = std::max(1, fst_Col / 3);
     for (int start = 0; start < fst_Col; start += Col_per_GPU) {
         for (int i = 0; i < fst_Row; i++) {
             std::vector<double> dev_temp;
@@ -594,6 +606,7 @@ int main(int argc, char** argv) {
     // Y_train.push_back(y_train);Y_test.push_back(y_test);
     BPNeuralNetwork(13, hidden_size, 3, srcX, srcY);
     train(x_train, y_train, 1);
+    stopGpuWorkers();
     // BP.predict_classify(x_test,3,y_test);
     delfile(fileName);
     delete[] fileName;
