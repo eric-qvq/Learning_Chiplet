@@ -186,45 +186,6 @@ make -j4
 > ```
 >
 
-
-
-
-
-
-> [!WARNING]
->
-> 下面的提醒内容不一定使用的上！
-
-> [!NOTE]
->
-> 下面需要使用到cmake编译，要用到zmq环境。
->
-> 所以在cmake之前，先安装zmq环境,在根目录下安装，指令是如下
->
-> ```
-> sudo apt-get install libzmq3-dev
-> ```
->
-> [zmq官网](https://zeromq.org/download/)
->
-> [Ubuntu下c++ ZeroMQ环境配置（已踩坑，亲测可用）_zeromq的坑-CSDN博客](https://blog.csdn.net/TU_Dresden/article/details/122240469?spm=1001.2014.3001.5506)
->
-> 安装完成后可以用下面三个指令的任意一个指令查看版本
->
-> ```
-> # 检查头文件路径
-> find /usr -name 'zmq.h'
-> 
-> # 检查库文件
-> find /usr -name 'libzmq*'
-> 
-> # 或者尝试查看版本号（如果pkg-config已安装）
-> pkg-config --modversion libzmq
-> ```
->
-
-
-
 8.编译安装popnet
 
 ```
@@ -235,11 +196,6 @@ cmake ..
 make -j4
 ```
 
-cmake的时候有依赖需要安装
-
-
-
-
 9.编译安装芯粒间通信程序。interchiplet提供了芯粒间通信所需要的API和实现代码。
 
 ```
@@ -249,7 +205,6 @@ cd build
 cmake ..
 make
 ```
-
 
 
 编译完成后应在interchiplet/bin下找到record_transfer和zmq_pro，在interchiplet/lib下找到libinterchiplet_app.a。
@@ -281,7 +236,6 @@ make
 ```
 
 
-
 3.执行可执行文件。示例包含4个进程，分别是1个CPU进行和3个GPU进程。必须在benchmark/matmul进程执行。
 
 ```
@@ -304,7 +258,6 @@ make clean
 ---
 
 
-
 ### 阶段二：使用仿真器运行benchmark 
 
 #### 2.1 赛题要求 
@@ -316,7 +269,6 @@ make clean
 
 1. 运行 mlp 成功，运行界面无报错，每个阶段每个芯粒的log文件有对应内容；
 2. 构建新的 benchmark，能够成功运行，且运行界面无报错，每个阶段每个芯粒的 log 文件有对应内容。
-
 
 
 要求一里面的构建有bug是指的当CPU跟GPU进行数据传输，在最后CPU把输出都传完了，GPU按理来说应该是结束了，但因为里面的while(1)，导致一直没结束，一直在循环空转中，等待CPU传下一个根本不存在的指令。对于这部分的修改bug，需要在GPU和CPU的通信过程中，加入终止信号，让GPU能够退出循环，从而进程终止。
@@ -338,7 +290,6 @@ CPU 侧 (benchmark/boundary/boundary.cpp)
 发送顺序：先 16 字节元数据（len, clamp），再 payload，再接收 int64 结果。
 
 
-
 GPU 侧 (benchmark/boundary/boundary.cu)
 线程块配置：threads = 256；block 数 blocks = (h_len + threads - 1) / threads。
 共享内存大小：shared_bytes = threads * sizeof(int64_t)。
@@ -356,8 +307,6 @@ Trace：-I ../bench.txt，延迟文件 -D ../delayInfo.txt。
 
 GPU 芯粒坐标与数量：GPU 在 (0,1)、(1,0)、(1,1)，CPU 在 (0,0)。
 可以调整以上参数（例如增大/减小 len、clamp，改变随机分布范围，改线程数、缓冲大小、虚通道数、链路长度、仿真周期等）来探索边界条件。
-
-
 
 
 这个基准测试通过在 **2x2 的异构网格**中，向不同距离的节点发送不同规模的数据包，系统性地探测了仿真器在**通信路由**、**数据流控**和**异构同步**这三个维度的边界能力。 我们以 **CPU 的串行计算结果**作为正确性基准，最终的日志和图表不仅验证了所有计算的准确无误，还精确反映了物理距离对通信延迟的影响，证明了该仿真平台具备进行复杂 Chiplet 系统研究的能力。
@@ -441,55 +390,6 @@ GPU 芯粒坐标与数量：GPU 在 (0,1)、(1,0)、(1,1)，CPU 在 (0,0)。
 
 
 采用参考现有的开源项目进行修改，因为感觉用其他的比较麻烦，所以采用他自带的gem5来代替sniper去做CPU仿真器的效果
-
-去修改的地方有几处，首先是gem5的，先要去到gem5/src/sim/syscall_emul.cc这个文件，对这个文件做修改
-
-修改前
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251123111046360.png" alt="image-20251123111046360" style="zoom:50%;" />
-
-
-
-修改后
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251123111008612.png" alt="image-20251123111008612" style="zoom:50%;" />
-
-修改这个是因为这里原来的函数会导致数据写入的方向错误，所以去修改到正常的写入方向。
-
-修改完后，还有各类的benchmark里面的yml文件需要修改，比如下面的这些，matmul.yml和cic.yml
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251123111252393.png" alt="image-20251123111252393" style="zoom:50%;" />
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251123111330413.png" alt="image-20251123111330413" style="zoom:50%;" />
-
-修改好后，编译运行程序，程序是可以正常运行结束的
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251123111507590.png" alt="image-20251123111507590" style="zoom:50%;" />
-
-
-
-> [!IMPORTANT]
->
-> 然后去修改下yml中的仿真长度
-
-未修改前
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251123113004627.png" alt="image-20251123113004627" style="zoom:50%;" />
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251123112954529.png" alt="image-20251123112954529" style="zoom:50%;" />
-
-已修改后
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251123112840554.png" alt="image-20251123112840554" style="zoom:50%;" />
-
-<img src="C:\Users\29800\AppData\Roaming\Typora\typora-user-images\image-20251123112854132.png" alt="image-20251123112854132" style="zoom:50%;" />
-
-> [!NOTE]
->
-> PopNet 没有完成事务是因为仿真长度太短：bench.txt 的时间戳在 4.11e9 以上，而原来 -T 10000000 只跑到 1e7，就直接结束，导致 “total finished 0 / average Delay -nan”。所以修改时间戳上限，让程序能够跑完
->
-> 同时这个问题，会让gpgpusim报一个status=134的错误，会提前进入死锁状态不让进程进行下去。
-
 
 
 然后查看gem5的日志，能够看到是正常结束的
@@ -643,6 +543,5 @@ cica.cu：循环接收 batch 描述与长度、payload，逐段进行块内归�
 芯粒互联由多次 request-reply 变为一次批量传输，有效减小头部和仲裁开销；
 
 CPU 端测得的 per-link 近似带宽 approx_bw(GB/s) 提升。
-
 
 
