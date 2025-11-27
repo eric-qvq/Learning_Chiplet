@@ -286,17 +286,15 @@ make clean
 
 CPU (boundary.cpp)
 
-1. 目标列表 targets（目的坐标 + 负载长度 + clamp 值
+1. 目标列表 targets（目的坐标 + 负载长度 + clamp 值）
 2. 随机数分布：std::uniform_int_distribution<int32_t> dist(-1500, 1500)（控制负载数据范围）。
 3. 发送顺序：先 16 字节元数据（len, clamp），再 payload，再接收 int64 结果。
 
 
 GPU (boundary.cu)
 
-1. 线程块配置：threads = 256；block 数 blocks = (h_len + threads - 1) / threads。
-2. 共享内存大小：shared_bytes = threads * sizeof(int64_t)。
-3. clamp_and_sum 核心使用 clamp 限制值、长度 h_len。
-4. 交互顺序：接收 16 字节元数据 → 接收 payload（sizeof(int32_t)*h_len）→ 归约 → 发送 int64 结果。
+1. 线程块配置修改：threads = 256；
+
 
 芯粒布置 (boundary.yml, Phase2)
 
