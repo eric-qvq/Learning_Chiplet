@@ -291,21 +291,29 @@ CPU (boundary.cpp)
 3. 发送顺序：先 16 字节元数据（len, clamp），再 payload，再接收 int64 结果。
 
 
-GPU (boundary.cu)
+GPU 侧 (boundary.cu)
 
-1. 线程块配置修改：threads = 256；
+1.线程块配置：threads = 256；// 降低 threads 让更多 block 并行，或提高 threads 降低 block 数；共享内存随 threads 改。
+
+增大 threads（幂次）：block 变少，shared/寄存器占用增大，可能降低 occupancy，结果正确。
+
+减小 threads（幂次）：block 变多，调度开销增大，结果正确。
 
 
-芯粒布置 (boundary.yml, Phase2)
 
-PopNet/拓扑
+PopNet (boundary.yml, Phase2)
 
-1. 网格与通道
-2. 缓冲
-3. 链路/时间
-4. 路由
+1.网格：-A/-c 增大为 3/2 或 3/3，模拟更大网络。
 
-可以调整以上参数（例如增大/减小 len、clamp，改变随机分布范围，改线程数、缓冲大小、虚通道数、链路长度、仿真周期等）来探索边界条件。
+网格会影响popnet的status，如果不够会报出status=139的错误，而且没有输出。所以要选择合适的网格
+
+2.仿真周期：-T 5000000 覆盖长时间戳的 trace。
+
+在运行的过程中，需要满足一定的时长，Popnet才会有输出数据来。不满足就会nan输出空。
+
+
+
+可以调整以上参数（例如增大/减小 len、clamp，改变随机分布范围，改线程数、改变网格、仿真周期等）来探索边界条件。
 
 
 ---
