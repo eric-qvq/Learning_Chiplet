@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
     };
 
     std::mt19937_64 rng(42);
-    std::uniform_int_distribution<int32_t> dist(-1500, 1500);
+    std::uniform_int_distribution<int32_t> dist(-500, 500);
 
     for (const auto& t : targets) {
         std::vector<int32_t> payload(static_cast<size_t>(t.len));
