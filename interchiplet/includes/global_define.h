@@ -16,14 +16,13 @@ enum SysCallID {
     // SYSCALL_GET_LOCAL_ADDR = 506,     // Get address of current processor.
     // SYSCALL_CHECK_REMOTE_READ = 507,  // Check remote read
 
-    SYSCALL_LAUNCH = 501,        // Launch request.
-    SYSCALL_WAITLAUNCH = 502,    // Waiit launch request.
-    SYSCALL_BARRIER = 503,       // Enter barrier.
-    SYSCALL_LOCK = 504,          // Lock mutex.
-    SYSCALL_UNLOCK = 505,        // Unlock mutex.
-    SYSCALL_REMOTE_READ = 506,   // Read cross chiplet
-    SYSCALL_REMOTE_WRITE = 507,  // Write cross chiplet
-    SYSCALL_SYNC = 508,
+    SYSCALL_LAUNCH = 501,       // Launch request.
+    SYSCALL_WAITLAUNCH = 502,   // Waiit launch request.
+    SYSCALL_BARRIER = 503,      // Enter barrier.
+    SYSCALL_LOCK = 504,         // Lock mutex.
+    SYSCALL_UNLOCK = 505,       // Unlock mutex.
+    SYSCALL_REMOTE_READ = 506,  // Read cross chiplet
+    SYSCALL_REMOTE_WRITE = 507, // Write cross chiplet
 };
 
 /**
@@ -101,7 +100,7 @@ enum SyncProtocolDesc {
  * @brief Structure of synchronization command.
  */
 class SyncCommand {
-   public:
+  public:
     /**
      * @brief Type of synchronization command.
      */
@@ -144,4 +143,4 @@ class SyncCommand {
      */
     int m_stdin_fd;
 };
-}  // namespace InterChiplet
+} // namespace InterChiplet

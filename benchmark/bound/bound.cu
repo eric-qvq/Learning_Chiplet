@@ -56,7 +56,7 @@ int main(int argc, char** argv) {
     receiveMessage(idX, idY, 0, 0, d_dataB, matrix_bytes);
 
     // calculate
-    dim3 threadPerBlock(25, 25);
+    dim3 threadPerBlock(10, 10);
     dim3 blockNumber(1);
     matrix_mul_gpu<<<blockNumber, threadPerBlock>>>(d_dataA, d_dataB, d_dataC, Col);
 

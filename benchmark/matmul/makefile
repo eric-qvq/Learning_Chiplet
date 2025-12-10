@@ -30,6 +30,7 @@ C_target: $(C_OBJS)
 # CUDA language target
 CUDA_target: $(CUDA_OBJS)
 	$(NVCC) -L$(SIMULATOR_ROOT)/gpgpu-sim/lib/$(GPGPUSIM_CONFIG) --cudart shared $(CUDA_OBJS) -o $(CUDA_TARGET)
+#nvcc -L/home/zs/Chiplet_Heterogeneous_newVersion/gpgpu-sim/lib/gcc-7.5.0/cuda-11000/release --cudart shared cuobj/matmul.o -o bin/matmul_cu
 
 	
 # Rule for C object

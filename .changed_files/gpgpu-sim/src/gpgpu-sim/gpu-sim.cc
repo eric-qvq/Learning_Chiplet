@@ -1031,7 +1031,7 @@ void gpgpu_sim::init() {
 
   if (g_network_mode) icnt_init();
 
-    // McPAT initialization function. Called on first launch of GPU
+  // McPAT initialization function. Called on first launch of GPU
 #ifdef GPGPUSIM_POWER_MODEL
   if (m_config.g_power_simulation_enabled) {
     init_mcpat(m_config, m_gpgpusim_wrapper, m_config.gpu_stat_sample_freq,
@@ -1859,9 +1859,9 @@ void gpgpu_sim::cycle() {
     }
     gpu_sim_cycle++;
     // TODO: quick forward cycle.
-    if (g_chiplet_directly_set_cycle)
-    {
-      std::cout << "Directly set cycle to " << g_chiplet_directly_set_cycle_val << std::endl;
+    if (g_chiplet_directly_set_cycle) {
+      std::cout << "Directly set cycle to " << g_chiplet_directly_set_cycle_val
+                << std::endl;
       gpu_sim_cycle = g_chiplet_directly_set_cycle_val;
       g_chiplet_jump_deadlock_detect = true;
       g_chiplet_directly_set_cycle = false;
@@ -1869,7 +1869,7 @@ void gpgpu_sim::cycle() {
 
     if (g_interactive_debugger_enabled) gpgpu_debug();
 
-      // McPAT main cycle (interface with McPAT)
+    // McPAT main cycle (interface with McPAT)
 #ifdef GPGPUSIM_POWER_MODEL
     if (m_config.g_power_simulation_enabled) {
       mcpat_cycle(m_config, getShaderCoreConfig(), m_gpgpusim_wrapper,
@@ -1971,7 +1971,8 @@ void gpgpu_sim::cycle() {
       if (g_chiplet_jump_deadlock_detect) {
         g_chiplet_jump_deadlock_detect = false;
         last_gpu_sim_insn = gpu_sim_insn;
-      } else if (m_config.gpu_deadlock_detect && gpu_sim_insn == last_gpu_sim_insn) {
+      } else if (m_config.gpu_deadlock_detect &&
+                 gpu_sim_insn == last_gpu_sim_insn) {
         gpu_deadlock = true;
       } else {
         last_gpu_sim_insn = gpu_sim_insn;
@@ -2068,8 +2069,7 @@ const memory_config *gpgpu_sim::getMemoryConfig() { return m_memory_config; }
 simt_core_cluster *gpgpu_sim::getSIMTCluster() { return *m_cluster; }
 
 // Directly set cycle
-void gpgpu_sim::chiplet_direct_set_cycle(long long int end_time)
-{
+void gpgpu_sim::chiplet_direct_set_cycle(long long int end_time) {
   g_chiplet_directly_set_cycle_val = end_time;
   g_chiplet_directly_set_cycle = true;
 }

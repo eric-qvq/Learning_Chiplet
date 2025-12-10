@@ -7,7 +7,8 @@
 #include "apis_c.h"
 
 // Simple clamp to keep values within |bound|.
-int64_t clamp_value(int64_t v, int64_t bound) {
+int64_t clamp_value(int64_t v, int64_t bound) 
+{
     if (v > bound) return bound;
     if (v < -bound) return -bound;
     return v;
