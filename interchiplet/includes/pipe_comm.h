@@ -27,7 +27,7 @@ namespace InterChiplet {
  * @brief Structure for Single Pipe communication.
  */
 class PipeCommUnit {
-   public:
+  public:
     PipeCommUnit(const char *file_name, bool read) {
         m_file_name = std::string(file_name);
         m_file_id = open(file_name, read ? O_RDONLY : O_WRONLY);
@@ -51,18 +51,21 @@ class PipeCommUnit {
 #endif
     }
 
-    bool valid() const { return m_file_id >= 0; }
+    bool valid() const {
+        return m_file_id >= 0;
+    }
 
     int read_data(void *dst_buf, int nbyte) {
         uint8_t *uint8_buf = (uint8_t *)dst_buf;
         int dst_ptr = 0;
         while (dst_ptr < nbyte) {
             int iter_nbyte = PIPE_COMMON_UNIT_CAPACITY;
-            if ((nbyte - dst_ptr) < iter_nbyte) iter_nbyte = nbyte - dst_ptr;
+            if ((nbyte - dst_ptr) < iter_nbyte)
+                iter_nbyte = nbyte - dst_ptr;
             iter_nbyte = read_data_iter(uint8_buf + dst_ptr, iter_nbyte);
 #ifdef PIPE_COMMON_DEBUG
-            std::cout << "[DEBUG read_data] " << dst_ptr << "\t" << (void *)(uint8_buf + dst_ptr)
-                      << "\t" << iter_nbyte << std::endl;
+            std::cout << "[DEBUG read_data] " << dst_ptr << "\t" << (void *)(uint8_buf + dst_ptr) << "\t" << iter_nbyte
+                      << std::endl;
 #endif
             if (iter_nbyte > 0) {
                 dst_ptr += iter_nbyte;
@@ -84,11 +87,12 @@ class PipeCommUnit {
         int src_ptr = 0;
         while (src_ptr < nbyte) {
             int iter_nbyte = PIPE_COMMON_UNIT_CAPACITY;
-            if ((nbyte - src_ptr) < iter_nbyte) iter_nbyte = nbyte - src_ptr;
+            if ((nbyte - src_ptr) < iter_nbyte)
+                iter_nbyte = nbyte - src_ptr;
             iter_nbyte = write(m_file_id, uint8_buf + src_ptr, iter_nbyte);
 #ifdef PIPE_COMMON_DEBUG
-            std::cout << "[DEBUG write_data] " << src_ptr << "\t" << (void *)(uint8_buf + src_ptr)
-                      << "\t" << iter_nbyte << std::endl;
+            std::cout << "[DEBUG write_data] " << src_ptr << "\t" << (void *)(uint8_buf + src_ptr) << "\t" << iter_nbyte
+                      << std::endl;
 #endif
             if (iter_nbyte > 0) {
                 src_ptr += iter_nbyte;
@@ -125,7 +129,7 @@ class PipeCommUnit {
         return src_ptr;
     }
 
-   private:
+  private:
     int read_data_iter(uint8_t *dst_buf, int nbyte) {
         while ((m_size - m_read_ptr) < nbyte) {
             int left_size = m_size - m_read_ptr;
@@ -155,7 +159,7 @@ class PipeCommUnit {
         return nbyte;
     }
 
-   private:
+  private:
     std::string m_file_name;
     int m_file_id;
     uint8_t *mp_buf;
@@ -171,8 +175,9 @@ class PipeCommUnit {
  * @brief Pipe communication structure.
  */
 class PipeComm {
-   public:
-    PipeComm() : m_named_fifo_map() {}
+  public:
+    PipeComm() : m_named_fifo_map() {
+    }
 
     int read_data(const char *file_name, void *buf, int nbyte) {
         std::string file_name_str = std::string(file_name);
@@ -198,10 +203,10 @@ class PipeComm {
         return it->second->write_data(buf, nbyte);
     }
 
-   private:
+  private:
     std::map<std::string, PipeCommUnit *> m_named_fifo_map;
 };
 /**
  * @}
  */
-}  // namespace InterChiplet
+} // namespace InterChiplet

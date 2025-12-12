@@ -22,22 +22,24 @@ phase1:
     clock_rate: 1
     pre_copy: "$SIMULATOR_ROOT/gpgpu-sim/configs/tested-cfgs/SM2_GTX480/*"
   # Process 3 (CPU via gem5)
+  # - cmd: "$SIMULATOR_ROOT/gem5/build/X86/gem5.opt"
+  #   args:
+  #     [
+  #       "$SIMULATOR_ROOT/gem5/configs/deprecated/example/se.py",
+  #       "--cmd=$BENCHMARK_ROOT/bin/matmul_c",
+  #       "--options=0 0",
+  #       "--cpu-type=AtomicSimpleCPU",
+  #       "--mem-size=2GB"
+  #     ]
+  #   log: "gem5.0.0.log"
+  #   is_to_stdout: false
+  #   clock_rate: 1
+  # Process 3
   - cmd: "$SIMULATOR_ROOT/gem5/build/X86/gem5.opt"
-    args:
-      [
-        "$SIMULATOR_ROOT/gem5/configs/deprecated/example/se.py",
-        "--cmd=$BENCHMARK_ROOT/bin/matmul_c",
-        "--options=0 0",
-        "--cpu-type=AtomicSimpleCPU",
-        "--mem-size=2GB"
-      ]
+    args: ["$SIMULATOR_ROOT/gem5/configs/deprecated/example/se.py", "--cmd", "$BENCHMARK_ROOT/bin/matmul_c", "-o", "0 0"]
     log: "gem5.0.0.log"
     is_to_stdout: false
-    clock_rate: 1
-  # Process 3
-#  - cmd: "$SIMULATOR_ROOT/snipersim/run-sniper"
-#    args: ["--", "$BENCHMARK_ROOT/bin/matmul_c", "0", "0"]
-#    log: "sniper.0.0.log"
+    clock_rate: 500
 
 # Phase 2 configuration.
 phase2:
